@@ -39,6 +39,9 @@
   .sira { color:var(--vurgu); font-weight:700; }
   .rozet { color:#fff; background:#e5162b; border-radius:4px; padding:1px 6px; font-size:11px; font-weight:700; margin-right:4px; }
   .rozet.planli { background:var(--mavi); }
+  .yer { width:140px; aspect-ratio:16/9; border-radius:8px; flex:none; background:var(--kart2); display:flex; align-items:center; justify-content:center; font-size:28px; }
+  .ozet { font-size:12px; color:var(--soluk); line-height:1.35; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .kart.haber a { padding-right:10px; }
   .bos { color:var(--soluk); padding:32px 0; grid-column:1/-1; text-align:center; line-height:1.5; }
   footer { text-align:center; color:var(--soluk); font-size:11px; padding:0 16px 24px; }
 </style>
@@ -58,19 +61,21 @@
     <button data-sekme="canli" id="canliButon">🔴 Canlı</button>
     <button data-sekme="yaklasan" id="yaklasanButon">📅 Yaklaşan</button>
     <button data-sekme="yeni">🆕 Yeni</button>
+    <button data-sekme="haber">📰 Haberler</button>
     <button data-sekme="favori">⭐ Favorilerim</button>
     <button data-sekme="kategori">📂 Kategoriler</button>
   </nav>
   <nav id="kategoriler" class="alt" hidden></nav>
+  <nav id="konular" class="alt" hidden></nav>
 </header>
 <main id="liste"></main>
-<footer>Veriler YouTube Data API ile alınmaktadır. Bu site YouTube ile bağlantılı değildir.</footer>
+<footer>Video verileri YouTube Data API ile alınmaktadır. Haber başlıkları kaynak sitelerin RSS akışlarından gelir ve her haber kendi sitesinde açılır. Bu site YouTube ile bağlantılı değildir.</footer>
 <script>
-const KATEGORILER = ["Gündem ve Haber", "Bilgi ve Belgesel", "Spor", "Eğlence ve Tepki", "Sohbet ve Podcast", "Aile ve Vlog"];
+const KATEGORILER = ["Gündem ve Haber", "Spor", "Eğlence ve Tepki", "Oyun", "Müzik", "Komedi ve Skeç", "Sohbet ve Podcast", "Bilgi ve Belgesel", "Teknoloji", "Yemek", "Eğitim", "Otomobil", "Gezi", "Güzellik ve Moda", "Aile ve Vlog"];
+const KONU_SIMGE = { "Gündem": "📰", "Dünya": "🌍", "Ekonomi": "💰", "Spor": "⚽", "Teknoloji": "💻", "Oyun": "🎮", "Magazin": "⭐", "Sinema ve Dizi": "🎬" };
 const GUNLER = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
 const BES_DK = 5 * 60 * 1000;
-let trend = [], akis = [], sekme = "trend", secilenKategori = KATEGORILER[0];
-let aranan = "", arananHam = "", guncellemeZamani = null, sonYukleme = 0;
+let trend = [], akis = [], haberler = [], sekme = "trend", secilenKategori = KATEGORILER[0], secilenKonu = "Tümü";
   function oku(ad, varsayilan) {
   try { const d = localStorage.getItem(ad); return d === null ? varsayilan : JSON.parse(d); } catch (e) { return varsayilan; }
 }
@@ -147,7 +152,44 @@ function kart(v, siraGoster) {
   kutu.append(a, yildiz);
   return kutu;
 }
-  
+  function haberKart(h) {
+  const kutu = yap("div", "kart haber");
+  const a = yap("a");
+  a.href = h.link;
+  a.target = "_blank";
+  a.rel = "noopener";
+  let gorsel;
+  if (h.resim) {
+    gorsel = yap("img");
+    gorsel.src = h.resim;
+    gorsel.alt = "";
+    gorsel.loading = "lazy";
+    gorsel.referrerPolicy = "no-referrer";
+    gorsel.onerror = () => gorsel.replaceWith(yap("div", "yer", KONU_SIMGE[h.konu] || "📰"));
+  } else {
+    gorsel = yap("div", "yer", KONU_SIMGE[h.konu] || "📰");
+  }
+  const bilgi = yap("div", "bilgi");
+  bilgi.append(yap("div", "baslik", h.baslik), yap("div", "kanal", h.kaynak + " · " + neZaman(h.tarih)));
+  if (h.ozet) bilgi.append(yap("div", "ozet", h.ozet));
+  a.append(gorsel, bilgi);
+  kutu.append(a);
+  return kutu;
+}
+
+function konulariKur() {
+  const nav = document.getElementById("konular");
+  nav.replaceChildren();
+  const konular = ["Tümü", ...Object.keys(KONU_SIMGE).filter(k => haberler.some(h => h.konu === k))];
+  if (!konular.includes(secilenKonu)) secilenKonu = "Tümü";
+  konular.forEach(k => {
+    const b = yap("button", "", k === "Tümü" ? k : (KONU_SIMGE[k] + " " + k));
+    b.dataset.konu = k;
+    b.onclick = () => { secilenKonu = k; goster(); window.scrollTo(0, 0); };
+    nav.append(b);
+  });
+}
+
 function yaklasanlar() {
   const simdi = Date.now();
   return akis
@@ -160,6 +202,8 @@ function goster() {
   document.querySelectorAll("#sekmeler button").forEach(b => b.classList.toggle("aktif", b.dataset.sekme === sekme));
   document.querySelectorAll("#kategoriler button").forEach(b => b.classList.toggle("aktif", b.textContent === secilenKategori));
   document.getElementById("kategoriler").hidden = sekme !== "kategori";
+  document.querySelectorAll("#konular button").forEach(b => b.classList.toggle("aktif", b.dataset.konu === secilenKonu));
+  document.getElementById("konular").hidden = sekme !== "haber";
 
   let videolar = [];
   let bosMesaj = "Burada şimdilik bir şey yok.";
@@ -181,6 +225,17 @@ function goster() {
       .filter(v => v.durum === "none" && !(shortsGizle && shortsMu(v)))
       .filter(v => (sayac[v.kanalId] = (sayac[v.kanalId] || 0) + 1) <= 2)
       .slice(0, 60);
+  } else if (sekme === "haber") {
+    let liste = haberler.filter(h => secilenKonu === "Tümü" || h.konu === secilenKonu);
+    if (aranan) liste = liste.filter(h => (h.baslik + " " + h.kaynak).toLocaleLowerCase("tr").includes(aranan));
+    const kutu = document.getElementById("liste");
+    kutu.replaceChildren();
+    if (!liste.length) {
+      kutu.append(yap("div", "bos", aranan ? "“" + arananHam + "” için haber bulunamadı." : "Şu an gösterilecek haber yok."));
+      return;
+    }
+    liste.slice(0, 150).forEach(h => kutu.append(haberKart(h)));
+    return;
   } else if (sekme === "favori") {
     const gorulen = new Set();
     videolar = akis.concat(trend)
@@ -190,7 +245,7 @@ function goster() {
       ? "Favori kanallarının şu an listede videosu yok."
       : "Henüz favori kanalın yok. Kartlardaki ☆ işaretine dokunarak kanal ekleyebilirsin.";
   } else {
-    videolar = akis.filter(v => v.kategori === secilenKategori && v.durum !== "upcoming");
+    videolar = akis.filter(v => v.kategori === secilenKategori && v.durum !== "upcoming").sort((a, b) => (b.durum === "live") - (a.durum === "live") || b.izlenme - a.izlenme);
   }
 
   if (shortsFiltresi && shortsGizle) videolar = videolar.filter(v => !shortsMu(v));
@@ -219,10 +274,13 @@ function yukle() {
   const taze = "?" + Date.now();
   return Promise.all([
     fetch("data/trend.json" + taze).then(r => r.json()),
-    fetch("data/akis.json" + taze).then(r => r.json())
-  ]).then(([t, a]) => {
+    fetch("data/akis.json" + taze).then(r => r.json()),
+    fetch("data/haberler.json" + taze).then(r => r.json()).catch(() => ({ haberler: [] }))
+  ]).then(([t, a, h]) => {
     trend = t.videolar.map((v, i) => Object.assign(v, { sira: i + 1 }));
     akis = a.videolar;
+    haberler = h.haberler || [];
+    konulariKur();
     guncellemeZamani = a.guncelleme;
     sonYukleme = Date.now();
     ustBilgiGuncelle();
@@ -263,4 +321,4 @@ document.addEventListener("visibilitychange", () => {
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3b8c8a5f8bcd4468981be23af8283012"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
-</html>
+let aranan = "", arananHam = "", guncellemeZamani = null, sonYukleme = 0;
