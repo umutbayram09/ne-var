@@ -3,44 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0f0f12">
 <link rel="apple-touch-icon" href="ikon-192.png">
 <title>Ne Var? – Şimdi YouTube'da ne var</title>
 <style>
-  :root { --bg:#0f0f12; --kart:#1b1b21; --yazi:#f2f2f2; --soluk:#9a9aa5; --vurgu:#ff3b5c; }
+  :root { --bg:#0f0f12; --kart:#1b1b21; --kart2:#2a2a33; --yazi:#f2f2f2; --soluk:#9a9aa5; --vurgu:#ff3b5c; --mavi:#3b82f6; }
   * { box-sizing:border-box; margin:0; padding:0; }
-    [hidden] { display:none !important; }
+  [hidden] { display:none !important; }
   body { background:var(--bg); color:var(--yazi); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
   header { position:sticky; top:0; background:var(--bg); padding:16px 16px 0; z-index:10; }
+  .ust { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
   h1 { font-size:22px; }
   h1 span { color:var(--vurgu); }
-  .guncelleme { color:var(--soluk); font-size:12px; margin-top:4px; }
-  nav { display:flex; gap:8px; overflow-x:auto; padding:12px 0; }
+  .guncelleme { color:var(--soluk); font-size:12px; }
+  .araclar { display:flex; gap:12px; align-items:center; margin-top:12px; }
+  #arama { flex:1; min-width:0; background:var(--kart); border:1px solid var(--kart2); color:var(--yazi); border-radius:999px; padding:9px 14px; font-size:14px; outline:none; }
+  #arama:focus { border-color:var(--vurgu); }
+  .secim { display:flex; align-items:center; gap:6px; font-size:13px; color:var(--soluk); white-space:nowrap; cursor:pointer; }
+  .secim input { accent-color:var(--vurgu); width:16px; height:16px; }
+  nav { display:flex; gap:8px; overflow-x:auto; padding:12px 0; scrollbar-width:none; }
   nav button { flex:none; border:0; border-radius:999px; padding:8px 14px; background:var(--kart); color:var(--yazi); font-size:14px; cursor:pointer; }
   nav button.aktif { background:var(--vurgu); }
   nav.alt { padding:0 0 12px; }
   nav.alt button { font-size:13px; padding:6px 12px; }
   main { padding:8px 16px 32px; display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); }
-  a.kart { display:flex; gap:12px; background:var(--kart); border-radius:12px; padding:10px; color:inherit; text-decoration:none; }
-  a.kart img { width:140px; aspect-ratio:16/9; object-fit:cover; border-radius:8px; flex:none; }
+  .kart { position:relative; background:var(--kart); border-radius:12px; }
+  .kart a { display:flex; gap:12px; padding:10px 40px 10px 10px; color:inherit; text-decoration:none; }
+  .kart img { width:140px; aspect-ratio:16/9; object-fit:cover; border-radius:8px; flex:none; background:var(--kart2); }
+  .yildiz { position:absolute; top:6px; right:6px; border:0; background:none; color:var(--soluk); font-size:20px; line-height:1; padding:4px; cursor:pointer; }
+  .yildiz.dolu { color:#ffc53d; }
   .bilgi { min-width:0; display:flex; flex-direction:column; gap:4px; }
   .baslik { font-size:14px; font-weight:600; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
   .kanal, .detay { font-size:12px; color:var(--soluk); }
   .sira { color:var(--vurgu); font-weight:700; }
   .rozet { color:#fff; background:#e5162b; border-radius:4px; padding:1px 6px; font-size:11px; font-weight:700; margin-right:4px; }
-  .bos { color:var(--soluk); padding:32px 0; grid-column:1/-1; text-align:center; }
+  .rozet.planli { background:var(--mavi); }
+  .bos { color:var(--soluk); padding:32px 0; grid-column:1/-1; text-align:center; line-height:1.5; }
   footer { text-align:center; color:var(--soluk); font-size:11px; padding:0 16px 24px; }
 </style>
 </head>
 <body>
 <header>
-  <h1>Ne <span>Var?</span></h1>
-  <div class="guncelleme" id="guncelleme">Yükleniyor…</div>
+  <div class="ust">
+    <h1>Ne <span>Var?</span></h1>
+    <div class="guncelleme" id="guncelleme">Yükleniyor…</div>
+  </div>
+  <div class="araclar">
+    <input id="arama" type="search" placeholder="Kanal ya da video ara…" autocomplete="off">
+    <label class="secim"><input type="checkbox" id="shorts"> Shorts gizle</label>
+  </div>
   <nav id="sekmeler">
     <button data-sekme="trend" class="aktif">🔥 Trend</button>
     <button data-sekme="canli" id="canliButon">🔴 Canlı</button>
+    <button data-sekme="yaklasan" id="yaklasanButon">📅 Yaklaşan</button>
     <button data-sekme="yeni">🆕 Yeni</button>
+    <button data-sekme="favori">⭐ Favorilerim</button>
     <button data-sekme="kategori">📂 Kategoriler</button>
   </nav>
   <nav id="kategoriler" class="alt" hidden></nav>
@@ -49,7 +67,19 @@
 <footer>Veriler YouTube Data API ile alınmaktadır. Bu site YouTube ile bağlantılı değildir.</footer>
 <script>
 const KATEGORILER = ["Gündem ve Haber", "Bilgi ve Belgesel", "Spor", "Eğlence ve Tepki", "Sohbet ve Podcast", "Aile ve Vlog"];
+const GUNLER = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
+const BES_DK = 5 * 60 * 1000;
 let trend = [], akis = [], sekme = "trend", secilenKategori = KATEGORILER[0];
+let aranan = "", arananHam = "", guncellemeZamani = null, sonYukleme = 0;
+
+function oku(ad, varsayilan) {
+  try { const d = localStorage.getItem(ad); return d === null ? varsayilan : JSON.parse(d); } catch (e) { return varsayilan; }
+}
+function kaydet(ad, deger) {
+  try { localStorage.setItem(ad, JSON.stringify(deger)); } catch (e) {}
+}
+const favoriler = new Set(oku("favoriler", []));
+let shortsGizle = oku("shortsGizle", true);
 
 function neZaman(t) {
   const dk = Math.floor((Date.now() - new Date(t)) / 60000);
@@ -59,8 +89,20 @@ function neZaman(t) {
   if (sa < 24) return sa + " saat önce";
   return Math.floor(sa / 24) + " gün önce";
 }
+function saatYaz(t) {
+  const d = new Date(t);
+  const saat = d.toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" });
+  const gunFark = Math.round((new Date(d.toDateString()) - new Date(new Date().toDateString())) / 86400000);
+  if (gunFark <= 0) return "Bugün " + saat;
+  if (gunFark === 1) return "Yarın " + saat;
+  if (gunFark < 7) return GUNLER[d.getDay()] + " " + saat;
+  return d.toLocaleDateString("tr-TR", { day: "numeric", month: "short" }) + " " + saat;
+}
 function sayi(n) {
   return new Intl.NumberFormat("tr-TR", { notation: "compact" }).format(n);
+}
+function shortsMu(v) {
+  return (v.sure > 0 && v.sure <= 60) || /#shorts?\b/i.test(v.baslik);
 }
 function yap(etiket, sinif, yazi) {
   const e = document.createElement(etiket);
@@ -69,8 +111,9 @@ function yap(etiket, sinif, yazi) {
   return e;
 }
 
-function kart(v, i, sirali) {
-  const a = yap("a", "kart");
+function kart(v, siraGoster) {
+  const kutu = yap("div", "kart");
+  const a = yap("a");
   a.href = "https://www.youtube.com/watch?v=" + v.id;
   a.target = "_blank";
   a.rel = "noopener";
@@ -79,69 +122,12 @@ function kart(v, i, sirali) {
   img.alt = "";
   img.loading = "lazy";
   const baslik = yap("div", "baslik");
-  if (sirali) baslik.append(yap("span", "sira", (i + 1) + ". "));
+  if (siraGoster && v.sira) baslik.append(yap("span", "sira", v.sira + ". "));
   baslik.append(v.baslik);
   const detay = yap("div", "detay");
   if (v.durum === "live" || v.canli) {
     detay.append(yap("span", "rozet", "CANLI"), v.izleyen ? sayi(v.izleyen) + " kişi izliyor" : "Şu an yayında");
+  } else if (v.durum === "upcoming") {
+    detay.append(yap("span", "rozet planli", "PLANLI"), saatYaz(v.planlanan || v.tarih));
   } else {
     detay.append(sayi(v.izlenme) + " izlenme · " + neZaman(v.tarih));
-  }
-  const bilgi = yap("div", "bilgi");
-  bilgi.append(baslik, yap("div", "kanal", v.kanal), detay);
-  a.append(img, bilgi);
-  return a;
-}
-
-function goster() {
-  document.querySelectorAll("#sekmeler button").forEach(b => b.classList.toggle("aktif", b.dataset.sekme === sekme));
-  document.querySelectorAll("#kategoriler button").forEach(b => b.classList.toggle("aktif", b.textContent === secilenKategori));
-  document.getElementById("kategoriler").hidden = sekme !== "kategori";
-  let videolar = [];
-  let bosMesaj = "Burada şimdilik bir şey yok.";
-  if (sekme === "trend") {
-    videolar = trend;
-  } else if (sekme === "canli") {
-    videolar = akis.filter(v => v.durum === "live").sort((a, b) => b.izleyen - a.izleyen);
-    bosMesaj = "Şu an listedeki kanallarda canlı yayın yok. Biraz sonra tekrar bak!";
-  } else if (sekme === "yeni") {
-        const sayac = {};
-    videolar = akis.filter(v => v.durum === "none" && (sayac[v.kanalId] = (sayac[v.kanalId] || 0) + 1) <= 2).slice(0, 60);
-  } else {
-    videolar = akis.filter(v => v.kategori === secilenKategori && v.durum !== "upcoming");
-  }
-  const liste = document.getElementById("liste");
-  liste.replaceChildren();
-  if (!videolar.length) {
-    liste.append(yap("div", "bos", bosMesaj));
-    return;
-  }
-  videolar.forEach((v, i) => liste.append(kart(v, i, sekme === "trend")));
-}
-
-document.querySelectorAll("#sekmeler button").forEach(b => {
-  b.onclick = () => { sekme = b.dataset.sekme; goster(); window.scrollTo(0, 0); };
-});
-KATEGORILER.forEach(k => {
-  const b = yap("button", "", k);
-  b.onclick = () => { secilenKategori = k; goster(); };
-  document.getElementById("kategoriler").append(b);
-});
-
-const taze = "?" + Date.now();
-Promise.all([
-  fetch("data/trend.json" + taze).then(r => r.json()),
-  fetch("data/akis.json" + taze).then(r => r.json())
-]).then(([t, a]) => {
-  trend = t.videolar;
-  akis = a.videolar;
-  document.getElementById("guncelleme").textContent = "Son güncelleme: " + neZaman(a.guncelleme);
-  const canliSayi = akis.filter(v => v.durum === "live").length;
-  if (canliSayi) document.getElementById("canliButon").textContent = "🔴 Canlı (" + canliSayi + ")";
-  goster();
-}).catch(() => {
-  document.getElementById("guncelleme").textContent = "Veri yüklenemedi.";
-});
-</script>
-</body>
-</html>
