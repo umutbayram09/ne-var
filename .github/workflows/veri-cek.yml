@@ -39,14 +39,60 @@ jobs:
               canli: v.snippet.liveBroadcastContent === "live"
             }));
             require("fs").writeFileSync("data/trend.json", JSON.stringify({ guncelleme: new Date().toISOString(), videolar }, null, 2));
-            console.log(videolar.length + " video kaydedildi");
+            console.log(videolar.length + " trend video kaydedildi");
           });
+          '
+
+      - name: Kanal videolarini cek
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          node -e '
+          const key = process.env.YOUTUBE_API_KEY;
+          const fs = require("fs");
+          const kanallar = JSON.parse(fs.readFileSync("data/kanallar.json", "utf8")).filter(k => k.id);
+          const api = async (yol) => {
+            const j = await (await fetch("https://www.googleapis.com/youtube/v3/" + yol + "&key=" + key)).json();
+            if (j.error) throw new Error(j.error.message);
+            return j;
+          };
+          (async () => {
+            const kategoriBul = {};
+            const idler = [];
+            for (const k of kanallar) {
+              kategoriBul[k.id] = k.kategori;
+              try {
+                const j = await api("playlistItems?part=contentDetails&maxResults=5&playlistId=UU" + k.id.slice(2));
+                j.items.forEach(x => idler.push(x.contentDetails.videoId));
+              } catch (e) { console.log(k.ad + ": " + e.message); }
+            }
+            const videolar = [];
+            for (let i = 0; i < idler.length; i += 50) {
+              const j = await api("videos?part=snippet,statistics,liveStreamingDetails&id=" + idler.slice(i, i + 50).join(","));
+              j.items.forEach(v => videolar.push({
+                id: v.id,
+                baslik: v.snippet.title,
+                kanal: v.snippet.channelTitle,
+                kanalId: v.snippet.channelId,
+                kategori: kategoriBul[v.snippet.channelId] || "",
+                tarih: v.snippet.publishedAt,
+                resim: (v.snippet.thumbnails.medium || v.snippet.thumbnails.default).url,
+                izlenme: Number(v.statistics?.viewCount || 0),
+                izleyen: Number(v.liveStreamingDetails?.concurrentViewers || 0),
+                durum: v.snippet.liveBroadcastContent
+              }));
+            }
+            videolar.sort((a, b) => new Date(b.tarih) - new Date(a.tarih));
+            fs.writeFileSync("data/akis.json", JSON.stringify({ guncelleme: new Date().toISOString(), videolar }, null, 2));
+            console.log(videolar.length + " kanal videosu, " + videolar.filter(v => v.durum === "live").length + " canli yayin");
+          })().catch(e => { console.error(e.message); process.exit(1); });
           '
 
       - name: Kaydet
         run: |
           git config user.name "ne-var-bot"
           git config user.email "actions@github.com"
-          git add data/trend.json
-          git diff --staged --quiet || git commit -m "Trend verisi guncellendi"
+          git add data/trend.json data/akis.json
+          git diff --staged --quiet || git commit -m "Veriler guncellendi"
+          git pull --rebase
           git push
