@@ -2,361 +2,910 @@
   {
     "kategori": "Gündem ve Haber",
     "ad": "Cüneyt Özdemir",
-    "tutamak": "@cuneytozdemir",
+    "kimlik": "@cuneytozdemir",
     "id": "UCkwHQ7DWv9aqEtvAOSO74dQ",
     "bulunan": "Cüneyt Özdemir",
-    "abone": 1780000
+    "abone": 1780000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "Fatih Altaylı",
-    "tutamak": "@fatihaltayli",
+    "kimlik": "@fatihaltayli",
     "id": "UCdS7OE5qbJQc7AG4SwlTzKg",
     "bulunan": "Fatih Altaylı",
-    "abone": 1740000
+    "abone": 1740000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "Nevşin Mengü",
-    "tutamak": "@nevsinmengutv",
+    "kimlik": "@nevsinmengutv",
     "id": "UCrG27KDq7eW4YoEOYsalU9g",
     "bulunan": "Nevşin Mengü",
-    "abone": 940000
+    "abone": 940000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "Medyascope",
-    "tutamak": "@medyascope_tv",
+    "kimlik": "@medyascope_tv",
     "id": "UCNCVuaQDvPrZ4oTKG90iqOA",
     "bulunan": "Medyascope TV",
-    "abone": 652000
+    "abone": 652000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "BBC News Türkçe",
-    "tutamak": "@bbcnewsturkce",
+    "kimlik": "@bbcnewsturkce",
     "id": "UCeMQiXmFNTtN3OHlNJxnnUw",
     "bulunan": "BBC News Türkçe",
-    "abone": 1210000
+    "abone": 1210000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "DW Türkçe",
-    "tutamak": "@dwturkce",
+    "kimlik": "@dwturkce",
     "id": "UCpi_jv70749NkAmkdugyiPQ",
     "bulunan": "DW Türkçe",
-    "abone": 1040000
+    "abone": 1040000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "Sözcü TV",
-    "tutamak": "@sozcutelevizyonu",
+    "kimlik": "@sozcutelevizyonu",
     "id": "UCOulx_rep5O4i9y6AyDqVvw",
     "bulunan": "SÖZCÜ Televizyonu",
-    "abone": 2320000
+    "abone": 2320000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "Halk TV",
-    "tutamak": "@halktv-eu",
+    "kimlik": "@halktv-eu",
     "id": "UCf_ResXZzE-o18zACUEmyvQ",
     "bulunan": "Halktv",
-    "abone": 2600000
+    "abone": 2600000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "Tele1",
-    "tutamak": "@tele1comtr",
+    "kimlik": "@tele1comtr",
     "id": "UCoHnRpOS5rL62jTmSDO5Npw",
     "bulunan": "Tele1",
-    "abone": 1310000
+    "abone": 1310000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "TRT Haber",
-    "tutamak": "@trthaber",
+    "kimlik": "@trthaber",
     "id": "UCBgTP2LOFVPmq15W-RH-WXA",
     "bulunan": "TRT Haber",
-    "abone": 1470000
+    "abone": 1470000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "CNN TÜRK",
-    "tutamak": "@cnnturk",
+    "kimlik": "@cnnturk",
     "id": "UCV6zcRug6Hqp1UX_FdyUeBg",
     "bulunan": "CNN TÜRK",
-    "abone": 2290000
+    "abone": 2290000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "NTV",
-    "tutamak": "@ntv",
+    "kimlik": "@ntv",
     "id": "UC9TDTjbOjFB9jADmPhSAPsw",
     "bulunan": "NTV",
-    "abone": 891000
+    "abone": 891000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "Habertürk",
-    "tutamak": "@haberturktv",
+    "kimlik": "@haberturktv",
     "id": "UCn6dNfiRE_Xunu7iMyvD7AA",
     "bulunan": "Habertürk TV",
-    "abone": 1660000
+    "abone": 1660000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Gündem ve Haber",
     "ad": "A Haber",
-    "tutamak": "@ahaber",
+    "kimlik": "@ahaber",
     "id": "UCKQhfw-lzz0uKnE1fY1PsAA",
     "bulunan": "A Haber",
-    "abone": 1500000
+    "abone": 1500000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Bilgi ve Belgesel",
     "ad": "Ruhi Çenet",
-    "tutamak": "@ruhicenetdocs",
+    "kimlik": "@ruhicenetdocs",
     "id": "UCWpk9PSGHoJW1hZT4egxTNQ",
     "bulunan": "Ruhi Cenet Documentaries",
-    "abone": 20200000
+    "abone": 20200000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Bilgi ve Belgesel",
     "ad": "Barış Özcan",
-    "tutamak": "@barisozcan",
+    "kimlik": "@barisozcan",
     "id": "UCv6jcPwFujuTIwFQ11jt1Yw",
     "bulunan": "Barış Özcan",
-    "abone": 6630000
+    "abone": 6630000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Bilgi ve Belgesel",
     "ad": "Evrim Ağacı",
-    "tutamak": "@evrimagaci",
+    "kimlik": "@evrimagaci",
     "id": "UCatnasFAiXUvWwH8NlSdd3A",
     "bulunan": "Evrim Ağacı",
-    "abone": 4920000
+    "abone": 4920000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Bilgi ve Belgesel",
     "ad": "Anlatan Adamlar",
-    "tutamak": "@AnlatanAdamlar",
+    "kimlik": "@AnlatanAdamlar",
     "id": "UCJ1XD2rEfmifXyOQflpZZgw",
     "bulunan": "Anlatan Adamlar",
-    "abone": 723000
+    "abone": 723000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Bilgi ve Belgesel",
     "ad": "TRT Belgesel",
-    "tutamak": "@trtbelgesel",
+    "kimlik": "@trtbelgesel",
     "id": "UCdVBWUBCuREx1Q2Ikw9R8Mw",
     "bulunan": "TRT Belgesel",
-    "abone": 2000000
+    "abone": 2010000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Spor",
     "ad": "Vole",
-    "tutamak": "@voleapp",
+    "kimlik": "@voleapp",
     "id": "UCeCRRixprpBjNmzRWgLBiUA",
     "bulunan": "VOLE",
-    "abone": 777000
+    "abone": 777000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Spor",
     "ad": "beIN SPORTS Türkiye",
-    "tutamak": "@beinsportsturkiye",
+    "kimlik": "@beinsportsturkiye",
     "id": "UCPe9vNjHF1kEExT5kHwc7aw",
     "bulunan": "beIN SPORTS Türkiye",
-    "abone": 2940000
+    "abone": 2940000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Spor",
     "ad": "TRT Spor",
-    "tutamak": "@trtspor",
+    "kimlik": "@trtspor",
     "id": "UCfYNqluOf8EbQkL44otydMw",
     "bulunan": "TRT SPOR",
-    "abone": 1280000
+    "abone": 1280000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Spor",
     "ad": "Socrates Dergi",
-    "tutamak": "@socratesdergi",
+    "kimlik": "@socratesdergi",
     "id": "UCvgwLFmnppZoPVBQJwPaNsA",
     "bulunan": "Socrates Dergi",
-    "abone": 1010000
+    "abone": 1010000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Spor",
     "ad": "Rabona Digital",
-    "tutamak": "@rabonadigital",
+    "kimlik": "@rabonadigital",
     "id": "UCpj3LeIWetKktdIJQcBx-uw",
     "bulunan": "Rabona",
-    "abone": 278000
+    "abone": 278000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Spor",
     "ad": "Galatasaray",
-    "tutamak": "@galatasaray",
+    "kimlik": "@galatasaray",
     "id": "UCQpeujIamj2ZOKXZnrxTRhA",
     "bulunan": "Galatasaray",
-    "abone": 4000000
+    "abone": 4000000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Spor",
     "ad": "Fenerbahçe SK",
-    "tutamak": "@fenerbahce",
+    "kimlik": "@fenerbahce",
     "id": "UCgqlho3-8a6FmDqQm7Q6gJw",
     "bulunan": "Fenerbahçe SK",
-    "abone": 3190000
+    "abone": 3190000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Spor",
     "ad": "Beşiktaş JK",
-    "tutamak": "@besiktas",
+    "kimlik": "@besiktas",
     "id": "UCLJVUlpsxZcIMECVDcZaM2g",
     "bulunan": "Beşiktaş JK",
-    "abone": 1770000
+    "abone": 1770000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Spor",
     "ad": "Trabzonspor",
-    "tutamak": "@trabzonspor",
+    "kimlik": "@trabzonspor",
     "id": "UCnZoe1ncVK7ApLBPfpZ_LEA",
     "bulunan": "Trabzonspor",
-    "abone": 433000
+    "abone": 433000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Eğlence ve Tepki",
     "ad": "Orkun Işıtmak",
-    "tutamak": "@orkunisitmak",
+    "kimlik": "@orkunisitmak",
     "id": "UCIXYyHANDvinQMIdauzSNJA",
     "bulunan": "Orkun Işıtmak",
-    "abone": 12800000
+    "abone": 12800000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Eğlence ve Tepki",
     "ad": "Tepkikolik",
-    "tutamak": "@tepkikolik",
+    "kimlik": "@tepkikolik",
     "id": "UC49if6153NFe5lUNFSmIDxw",
     "bulunan": "TepkiKolik",
-    "abone": 2690000
+    "abone": 2690000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Eğlence ve Tepki",
     "ad": "Noluyo Ya",
-    "tutamak": "@noluyoyaa",
+    "kimlik": "@noluyoyaa",
     "id": "UC4-bGrwiQOCVpvQwEGWaqGA",
     "bulunan": "Noluyo Ya ¿",
-    "abone": 6140000
+    "abone": 6140000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Eğlence ve Tepki",
     "ad": "Hayrettin",
-    "tutamak": "@hayrettin",
+    "kimlik": "@hayrettin",
     "id": "UCEk90S8iuHt0eUzbK8Nkp_g",
     "bulunan": "Hayrettin",
-    "abone": 3780000
+    "abone": 3790000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Eğlence ve Tepki",
     "ad": "Enes Batur",
-    "tutamak": "@newdaynewgame",
+    "kimlik": "@newdaynewgame",
     "id": "UCG0HA4uyuuzPzeq_US_ywVg",
     "bulunan": "Enes Batur S",
-    "abone": 17800000
+    "abone": 17800000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Eğlence ve Tepki",
     "ad": "Hayalhanem",
-    "tutamak": "@hayalhanem",
+    "kimlik": "@hayalhanem",
     "id": "UCaDpCyQiDfjLJ5jTmzZz7ZA",
     "bulunan": "Hayalhanem",
-    "abone": 5580000
+    "abone": 5580000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Eğlence ve Tepki",
     "ad": "Danla Bilic",
-    "tutamak": "@danlabilic",
+    "kimlik": "@danlabilic",
     "id": "UCJXKKGzjjqnHAEkJsdC7ZKw",
     "bulunan": "Danla Bilic",
-    "abone": 2970000
+    "abone": 2970000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Eğlence ve Tepki",
     "ad": "Onedio",
-    "tutamak": "@onediotube",
+    "kimlik": "@onediotube",
     "id": "UCRr2Ib2uv9JSr77h6dY1d3A",
     "bulunan": "Onedio",
-    "abone": 4110000
+    "abone": 4110000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Sohbet ve Podcast",
     "ad": "Kafa TV",
-    "tutamak": "@kafa",
+    "kimlik": "@kafa",
     "id": "UC3UYYweSGUJgk_TlUzpEaBw",
     "bulunan": "KAFA TV",
-    "abone": 1750000
+    "abone": 1750000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Sohbet ve Podcast",
     "ad": "Mantra",
-    "tutamak": "@mantrast",
+    "kimlik": "@mantrast",
     "id": "UC28kupTc-n580PhgT1KT2uw",
     "bulunan": "Mantra ",
-    "abone": 290000
+    "abone": 290000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Sohbet ve Podcast",
     "ad": "Babala TV",
-    "tutamak": "@babalatv",
+    "kimlik": "@babalatv",
     "id": "UCZ5aOEWFOopXLeiIUd2mfJw",
     "bulunan": "BaBaLa TV",
-    "abone": 4530000
+    "abone": 4530000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Sohbet ve Podcast",
     "ad": "Az Önce Konuştum",
-    "tutamak": "@candastolgaileazoncekonustum",
+    "kimlik": "@candastolgaileazoncekonustum",
     "id": "UCscVjqcysNyhNJg13fYb9BQ",
     "bulunan": "TV100 Candaş Tolga Işık ile Az Önce Konuştum",
-    "abone": 214000
+    "abone": 214000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Sohbet ve Podcast",
     "ad": "Fularsız Entellik",
-    "tutamak": "@fularszentellik",
+    "kimlik": "@fularszentellik",
     "id": "UCADBOtdSuFLYh4hgtXKzVNQ",
     "bulunan": "Fularsız Entellik",
-    "abone": 33800
+    "abone": 33800,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Sohbet ve Podcast",
     "ad": "Saba Tümer",
-    "tutamak": "@sabatumer",
+    "kimlik": "@sabatumer",
     "id": "UCPexcMEfmFuRp1Ds48Kc3bg",
     "bulunan": "Saba Tümer",
-    "abone": 195000
+    "abone": 196000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Aile ve Vlog",
     "ad": "Atik Ailesi",
-    "tutamak": "@atikailesi",
+    "kimlik": "@atikailesi",
     "id": "UCZOcZonhmKbNGeSZGJpa5Aw",
     "bulunan": "Atik Ailesi",
-    "abone": 4830000
+    "abone": 4830000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Aile ve Vlog",
     "ad": "Duygu Özaslan",
-    "tutamak": "@duyguozaslan",
+    "kimlik": "@duyguozaslan",
     "id": "UCYUY1iZP9t6LFbBMg_QOPAA",
     "bulunan": "Duygu Özaslan",
-    "abone": 1370000
+    "abone": 1370000,
+    "yontem": "kimlik"
   },
   {
     "kategori": "Aile ve Vlog",
     "ad": "Merve Özkaynak",
-    "tutamak": "@merveozkaynak",
+    "kimlik": "@merveozkaynak",
     "id": "UCvn8ZVM_pZRAis2d7da5zGQ",
     "bulunan": "Merve Özkaynak",
-    "abone": 2120000
+    "abone": 2120000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Elraenn",
+    "kimlik": "UC51-ljNFrvY5ZmV0C_61XcA",
+    "id": "UC51-ljNFrvY5ZmV0C_61XcA",
+    "bulunan": "Elraenn",
+    "abone": 3950000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Jahrein",
+    "kimlik": "@jahrein",
+    "id": "UCzQ50nFjgNfd0bJWv8j3ecA",
+    "bulunan": "jahrein",
+    "abone": 2480,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "wtcN",
+    "kimlik": "@wtcN",
+    "id": "UCKdVz2GTc0f8M2VNHMIu9cg",
+    "bulunan": "fkb",
+    "abone": 2860,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Burak Oyunda",
+    "kimlik": "@BurakOyunda",
+    "id": "UCH6xp2Jln9OlWV8s9ldvXdg",
+    "bulunan": "Burak Oyunda",
+    "abone": 3460000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Unlost",
+    "kimlik": "@Unlost",
+    "id": null,
+    "bulunan": null,
+    "abone": 0,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Ferited",
+    "kimlik": "UCKizsKkBBjuEoY_fgRx-4QQ",
+    "id": "UCKizsKkBBjuEoY_fgRx-4QQ",
+    "bulunan": "Ferited",
+    "abone": 6810000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Rüyaperest",
+    "kimlik": "UC5QcoWzRKJaFk6G7N3vevWg",
+    "id": "UC5QcoWzRKJaFk6G7N3vevWg",
+    "bulunan": "Rüyaperest",
+    "abone": 808000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "TAMER",
+    "kimlik": "UCu-OwDLiQfgYPHk2d8AwMdQ",
+    "id": "UCu-OwDLiQfgYPHk2d8AwMdQ",
+    "bulunan": "TAMER",
+    "abone": 661000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Beyaz Kurt",
+    "kimlik": "UCvzpmRfiLNxKRFRQTKrUang",
+    "id": "UCvzpmRfiLNxKRFRQTKrUang",
+    "bulunan": "Beyaz Kurt",
+    "abone": 1120000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "TÜRKPRO",
+    "kimlik": "UCz8lelVfalizvMb2bHQjDvg",
+    "id": "UCz8lelVfalizvMb2bHQjDvg",
+    "bulunan": "TÜRKPRO",
+    "abone": 4740000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Minecraft Parodileri",
+    "kimlik": "UC2XbMXD6jSrixkpgs7vHFUA",
+    "id": "UC2XbMXD6jSrixkpgs7vHFUA",
+    "bulunan": "Minecraft Parodileri",
+    "abone": 7690000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Lia Minecraft",
+    "kimlik": "UCdZLjkrowEWbUQQycBxr1SQ",
+    "id": "UCdZLjkrowEWbUQQycBxr1SQ",
+    "bulunan": "Lia Minecraft",
+    "abone": 305000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Ebru Yaşar",
+    "kimlik": "UCaNcW4UChDJIC7ApyD1oLcw",
+    "id": "UCaNcW4UChDJIC7ApyD1oLcw",
+    "bulunan": "Ebru Yaşar",
+    "abone": 285000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Sezen Aksu",
+    "kimlik": "UC6OI7Crv96jgra5pwJNDFRQ",
+    "id": "UC6OI7Crv96jgra5pwJNDFRQ",
+    "bulunan": "Sezen Aksu",
+    "abone": 3220000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Perma Band",
+    "kimlik": "UC6JpmqL03yw4AKLQL2RSiIw",
+    "id": "UC6JpmqL03yw4AKLQL2RSiIw",
+    "bulunan": "Perma Band",
+    "abone": 199000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Tefo",
+    "kimlik": "UCEq2-c14ukWTAw_FfMLyiFw",
+    "id": "UCEq2-c14ukWTAw_FfMLyiFw",
+    "bulunan": "Tefo",
+    "abone": 83500,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Tarkan",
+    "kimlik": "@tarkan",
+    "id": "UCnxZBLfmnZwjh8vSg6Kt-Dg",
+    "bulunan": "Tarkan",
+    "abone": 3100000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Hadise",
+    "kimlik": "@hadise",
+    "id": "UCcTEh76rfKkidaNDB9f7cJg",
+    "bulunan": "Hadise Acikgoz",
+    "abone": 401000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Edis",
+    "kimlik": "@edis",
+    "id": "UCIRXXjJFrSCn6ANeLPcJp4w",
+    "bulunan": "EDIS",
+    "abone": 110000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Semicenk",
+    "kimlik": "@semicenk",
+    "id": "UC-CVSTgHLplJ-ZWPRX2HwBw",
+    "bulunan": "semicenk",
+    "abone": 19,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Mabel Matiz",
+    "kimlik": "@mabelmatiz",
+    "id": "UCFWOCsO264XTkBYc3UCvnMA",
+    "bulunan": "mabelmatiz",
+    "abone": 976000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "Netd Müzik",
+    "kimlik": "@netdmuzik",
+    "id": "UCR5wZcXtOUka8jTA57flzMg",
+    "bulunan": "netd müzik",
+    "abone": 27100000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Müzik",
+    "ad": "DMC",
+    "kimlik": "@dmc",
+    "id": "UCFbPfb0He_GzHXaxmCZqPMQ",
+    "bulunan": "DM&C Dance Music&Comedy",
+    "abone": 34800,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Yemek",
+    "ad": "Refika'nın Mutfağı",
+    "kimlik": "@RefikaninMutfagi",
+    "id": "UCO3MaQR-Vh6cgBZRlD44jWg",
+    "bulunan": "Refika'nın Mutfağı",
+    "abone": 2630000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Yemek",
+    "ad": "Arda'nın Mutfağı",
+    "kimlik": "@ArdaninMutfagi",
+    "id": "UCJ5KzVnmaIIVyLQUCRii2uw",
+    "bulunan": "Arda'nın Mutfağı",
+    "abone": 1040000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Yemek",
+    "ad": "Nefis Yemek Tarifleri",
+    "kimlik": "@nefisyemektarifleri",
+    "id": "UCeh3XQszWO6lLdKz_SZmm1Q",
+    "bulunan": "Nefis Yemek Tarifleri",
+    "abone": 6560000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Yemek",
+    "ad": "Yemek.com",
+    "kimlik": "@yemekcom",
+    "id": "UCWA2nh0yrIMC6uG0hfbucRQ",
+    "bulunan": "Yemek.com",
+    "abone": 2350000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Yemek",
+    "ad": "CZN Burak",
+    "kimlik": "@cznburak",
+    "id": "UCUcfej7lPDoeqTlferD2mcw",
+    "bulunan": "Czn Burak",
+    "abone": 17900000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Yemek",
+    "ad": "MasterChef Türkiye",
+    "kimlik": "@MasterChefTurkiye",
+    "id": "UCrZfdLWzSG2LOR2hZWWLA8g",
+    "bulunan": "MasterChef Türkiye",
+    "abone": 1920000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Yemek",
+    "ad": "Somer Sivrioğlu",
+    "kimlik": "@somersivrioglu",
+    "id": null,
+    "bulunan": null,
+    "abone": 0,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Yemek",
+    "ad": "Danilo Zanna",
+    "kimlik": "@DaniloZanna",
+    "id": null,
+    "bulunan": null,
+    "abone": 0,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Teknoloji",
+    "ad": "Webtekno",
+    "kimlik": "@webtekno",
+    "id": "UCIw9uiVhJtpzkyQLOOpbjrg",
+    "bulunan": "Webtekno",
+    "abone": 45,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Teknoloji",
+    "ad": "ShiftDelete.Net",
+    "kimlik": "@shiftdeletenet",
+    "id": "UCzNu79N8Lq1wUY52MkhWKSA",
+    "bulunan": "ShiftDelete.Net",
+    "abone": 2260000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Teknoloji",
+    "ad": "Teknoseyir",
+    "kimlik": "@teknoseyir",
+    "id": "UCFIHrIGT0MBMRHzQtmzOWlQ",
+    "bulunan": "TeknoSeyir",
+    "abone": 381000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Teknoloji",
+    "ad": "Technopat",
+    "kimlik": "@technopat",
+    "id": "UC-gs6ml23jQKvLC86LzpQ0g",
+    "bulunan": "Technopat",
+    "abone": 914000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Teknoloji",
+    "ad": "DonanımHaber",
+    "kimlik": "@donanimhaber",
+    "id": null,
+    "bulunan": null,
+    "abone": 0,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Teknoloji",
+    "ad": "Megabayt",
+    "kimlik": "@megabayt",
+    "id": "UCp-resAXKrmzMOEAvGYxSPQ",
+    "bulunan": "megabayt",
+    "abone": 1,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Teknoloji",
+    "ad": "Enis Kirazoğlu",
+    "kimlik": "UCXin0u5SrVEBjn5LhOoG97A",
+    "id": "UCXin0u5SrVEBjn5LhOoG97A",
+    "bulunan": "Enis Kirazoglu",
+    "abone": 1790000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Otomobil",
+    "ad": "Otokolik",
+    "kimlik": "@otokolik",
+    "id": "UCdh4aqpDiAIFyo_JgKw5CLA",
+    "bulunan": "Otokolik",
+    "abone": 2890,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Otomobil",
+    "ad": "arabam.com",
+    "kimlik": "@arabamcom",
+    "id": "UCb1DnA26RT-bPIJw0LV5SgA",
+    "bulunan": "arabamcom",
+    "abone": 22400,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Otomobil",
+    "ad": "Motor1 Türkiye",
+    "kimlik": "@motor1turkiye",
+    "id": "UCIqHQIw_T5YP5EKxKfUQ8pQ",
+    "bulunan": "Motor1 Türkiye",
+    "abone": 277000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Gezi",
+    "ad": "Murat Soner",
+    "kimlik": "@muratsoner",
+    "id": "UCTpnOrDAyEUsCCfC0AE6zDw",
+    "bulunan": "Murat Soner",
+    "abone": 3730000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Gezi",
+    "ad": "Yasin Obuz",
+    "kimlik": "@YasinObuz",
+    "id": null,
+    "bulunan": null,
+    "abone": 0,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Güzellik ve Moda",
+    "ad": "Hande Sarıoğlu",
+    "kimlik": "@handesarioglu",
+    "id": null,
+    "bulunan": null,
+    "abone": 0,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Güzellik ve Moda",
+    "ad": "Ece Ronay",
+    "kimlik": "@eceronay",
+    "id": null,
+    "bulunan": null,
+    "abone": 0,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Eğitim",
+    "ad": "Tonguç Akademi",
+    "kimlik": "@TongucAkademi",
+    "id": "UCm3vDH7Uvz_qwql5Qih4yGw",
+    "bulunan": "tonguç AKADEMİ",
+    "abone": 3960000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Eğitim",
+    "ad": "Benim Hocam",
+    "kimlik": "@BenimHocam",
+    "id": "UCjLv1XVYi5K4Pq33lY0K22w",
+    "bulunan": "Benim Hocam",
+    "abone": 3580000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Eğitim",
+    "ad": "Rehber Matematik",
+    "kimlik": "@RehberMatematik",
+    "id": "UCzxj9SKkLuDhdxSDXxcmwqQ",
+    "bulunan": "Rehber Matematik",
+    "abone": 2700000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Eğitim",
+    "ad": "Hocalara Geldik",
+    "kimlik": "@HocalaraGeldik",
+    "id": "UCBcM2J8SHyq8GUSvrhWnwTg",
+    "bulunan": "Hocalara Geldik",
+    "abone": 1310000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Eğitim",
+    "ad": "Khan Academy Türkçe",
+    "kimlik": "@KhanAcademyTurkce",
+    "id": "UC8hgx5hCiyDmO3UeBl95_1Q",
+    "bulunan": "KhanAcademyTurkce",
+    "abone": 876000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Komedi ve Skeç",
+    "ad": "Seksendört",
+    "kimlik": "UC1v30God7k3oSpGnLZbAn5Q",
+    "id": "UC1v30God7k3oSpGnLZbAn5Q",
+    "bulunan": "Seksendört",
+    "abone": 50300,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Komedi ve Skeç",
+    "ad": "Bora Kontaş",
+    "kimlik": "UCqjp1xj3gTox-T4V_JlMvTQ",
+    "id": "UCqjp1xj3gTox-T4V_JlMvTQ",
+    "bulunan": "Bora Kontaş",
+    "abone": 2250000,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Komedi ve Skeç",
+    "ad": "Doğu Demirkol",
+    "kimlik": "@dogudemirkol",
+    "id": "UCl6LGVei-_sXKvlrwiz7Vkw",
+    "bulunan": "Doğu Demirkol",
+    "abone": 8790,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Komedi ve Skeç",
+    "ad": "Cem Yılmaz",
+    "kimlik": "@cemyilmaz",
+    "id": null,
+    "bulunan": null,
+    "abone": 0,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Komedi ve Skeç",
+    "ad": "Hasan Can Kaya",
+    "kimlik": "@hasancankaya",
+    "id": "UCtPQhdofT3-tczKzfg9woww",
+    "bulunan": "hasancankaya",
+    "abone": 1,
+    "yontem": "kimlik"
+  },
+  {
+    "kategori": "Oyun",
+    "ad": "Pintipanda",
+    "kimlik": "@pintipanda",
+    "id": null,
+    "bulunan": null,
+    "abone": 0,
+    "yontem": "kimlik"
   }
 ]
