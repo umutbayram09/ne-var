@@ -1,0 +1,35 @@
+name: Haber cek
+
+on:
+  schedule:
+    - cron: "10,40 * * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - haber-kaynaklari.txt
+      - haber-cek.js
+
+permissions:
+  contents: write
+
+jobs:
+  cek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Haberleri cek
+        run: node haber-cek.js
+
+      - name: Kaydet
+        run: |
+          git config user.name "ne-var-bot"
+          git config user.email "actions@github.com"
+          git add data/haberler.json
+          git diff --staged --quiet || git commit -m "Haberler guncellendi"
+          git pull --rebase
+          git push
