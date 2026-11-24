@@ -42,6 +42,22 @@
   .yer { width:140px; aspect-ratio:16/9; border-radius:8px; flex:none; background:var(--kart2); display:flex; align-items:center; justify-content:center; font-size:28px; }
   .ozet { font-size:12px; color:var(--soluk); line-height:1.35; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
   .kart.haber a { padding-right:10px; }
+  .zar { border:0; border-radius:999px; padding:9px 14px; background:var(--kart2); color:var(--yazi); font-size:14px; cursor:pointer; white-space:nowrap; }
+  .takvim { display:flex; flex-wrap:wrap; gap:8px; padding:0 10px 10px 162px; }
+  .takvim a { font-size:12px; color:#8ab4ff; text-decoration:none; background:var(--kart2); padding:4px 8px; border-radius:6px; }
+  .perde { position:fixed; inset:0; background:rgba(0,0,0,.72); z-index:50; display:flex; align-items:center; justify-content:center; padding:16px; }
+  .pencere { background:var(--kart); border-radius:16px; padding:20px; max-width:560px; width:100%; max-height:90vh; overflow:auto; }
+  .pencere h2 { font-size:20px; margin-bottom:6px; }
+  .pencere p { color:var(--soluk); font-size:14px; line-height:1.4; margin-bottom:14px; }
+  .secenekler { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+  .secenekler button { border:1px solid var(--kart2); background:var(--bg); color:var(--yazi); border-radius:999px; padding:8px 12px; font-size:14px; cursor:pointer; }
+  .secenekler button.secili { background:var(--vurgu); border-color:var(--vurgu); }
+  .dugmeler { display:flex; gap:8px; justify-content:flex-end; align-items:center; }
+  .ana-dugme { border:0; border-radius:999px; padding:10px 18px; background:var(--vurgu); color:#fff; font-size:14px; font-weight:600; cursor:pointer; }
+  .ikincil { border:0; background:none; color:var(--soluk); font-size:14px; cursor:pointer; padding:8px 10px; }
+  .bolum { grid-column:1/-1; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-top:6px; font-size:16px; font-weight:700; }
+  .bolum .alt-yazi { font-size:12px; font-weight:400; color:var(--soluk); }
+  .bolum button { border:0; border-radius:999px; padding:7px 12px; background:var(--kart2); color:var(--yazi); font-size:13px; cursor:pointer; }
   .bos { color:var(--soluk); padding:32px 0; grid-column:1/-1; text-align:center; line-height:1.5; }
   footer { text-align:center; color:var(--soluk); font-size:11px; padding:0 16px 24px; }
 </style>
@@ -54,9 +70,11 @@
   </div>
   <div class="araclar">
     <input id="arama" type="search" placeholder="Kanal ya da video ara…" autocomplete="off">
+    <button id="zarButon" class="zar">🎲 Ne izlesem?</button>
     <label class="secim"><input type="checkbox" id="shorts"> Shorts gizle</label>
   </div>
   <nav id="sekmeler">
+    <button data-sekme="ozel">✨ Sana Özel</button>
     <button data-sekme="trend" class="aktif">🔥 Trend</button>
     <button data-sekme="canli" id="canliButon">🔴 Canlı</button>
     <button data-sekme="yaklasan" id="yaklasanButon">📅 Yaklaşan</button>
@@ -72,6 +90,7 @@
 <footer>Video verileri YouTube Data API ile alınmaktadır. Gündem cümleleri bu verilerden otomatik üretilir. Basında çıkan haberler kaynak sitelerin RSS akışlarından gelir ve kendi sitelerinde açılır. Bu site YouTube ile bağlantılı değildir.</footer>
 <script>
 const KATEGORILER = ["Gündem ve Haber", "Spor", "Eğlence ve Tepki", "Oyun", "Müzik", "Komedi ve Skeç", "Sohbet ve Podcast", "Bilgi ve Belgesel", "Teknoloji", "Yemek", "Eğitim", "Otomobil", "Gezi", "Güzellik ve Moda", "Aile ve Vlog"];
+const KATEGORI_SIMGE = { "Gündem ve Haber": "📰", "Spor": "⚽", "Eğlence ve Tepki": "😂", "Oyun": "🎮", "Müzik": "🎵", "Komedi ve Skeç": "🎭", "Sohbet ve Podcast": "🎙️", "Bilgi ve Belgesel": "🧠", "Teknoloji": "💻", "Yemek": "🍳", "Eğitim": "📚", "Otomobil": "🚗", "Gezi": "✈️", "Güzellik ve Moda": "💄", "Aile ve Vlog": "🏡" };
 const GUNDEM_TUR = { trend: ["🔥", "Trend"], zirve: ["👑", "Trend"], canli: ["🔴", "Canlı"], plan: ["📅", "Planlanan"], esik: ["🚀", "Rekor"], basin: ["📰", "Basında"] };
 const GUNDEM_FILTRE = ["Tümü", "Trend", "Canlı", "Planlanan", "Rekor", "Basında"];
 const GUNLER = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
@@ -87,6 +106,9 @@ function kaydet(ad, deger) {
 }
 const favoriler = new Set(oku("favoriler", []));
 let shortsGizle = oku("shortsGizle", true);
+let ilgiler = oku("ilgiler", null);
+let oneriSecim = [];
+if (ilgiler && ilgiler.length) sekme = "ozel";
 
 function neZaman(t) {
   const dk = Math.floor((Date.now() - new Date(t)) / 60000);
@@ -152,8 +174,90 @@ function kart(v, siraGoster) {
     kaydet("favoriler", [...favoriler]);
     goster();
   };
-  kutu.append(a, yildiz);
+  kutu.append(a);
+  if (v.durum === "upcoming") kutu.append(takvimBaglantilari(v));
+  kutu.append(yildiz);
   return kutu;
+}
+
+function takvimBaglantilari(v) {
+  const bas = new Date(v.planlanan || v.tarih);
+  const bit = new Date(bas.getTime() + 3600000);
+  const f = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+  const url = "https://www.youtube.com/watch?v=" + v.id;
+  const ad = v.kanal + ": " + v.baslik;
+  const g = yap("a", "", "📅 Google Takvim");
+  g.href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(ad) + "&dates=" + f(bas) + "/" + f(bit) + "&details=" + encodeURIComponent("Ne Var? hatırlatması\n" + url);
+  g.target = "_blank";
+  g.rel = "noopener";
+  const i = yap("a", "", "🗓️ Telefon takvimi");
+  i.href = "#";
+  i.onclick = e => {
+    e.preventDefault();
+    const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//NeVar//TR", "BEGIN:VEVENT", "UID:" + v.id + "@ne-var", "DTSTAMP:" + f(new Date()), "DTSTART:" + f(bas), "DTEND:" + f(bit),
+      "SUMMARY:" + ad.replace(/[,;\\\n]/g, " "), "DESCRIPTION:" + url, "URL:" + url,
+      "BEGIN:VALARM", "TRIGGER:-PT10M", "ACTION:DISPLAY", "DESCRIPTION:Yayın 10 dakika sonra başlıyor", "END:VALARM", "END:VEVENT", "END:VCALENDAR"].join("\r\n");
+    const l = document.createElement("a");
+    l.href = URL.createObjectURL(new Blob([ics], { type: "text/calendar" }));
+    l.download = "ne-var-yayin.ics";
+    document.body.append(l);
+    l.click();
+    l.remove();
+  };
+  const d = yap("div", "takvim");
+  d.append(g, i);
+  return d;
+}
+
+function ilgiPenceresi() {
+  const secili = new Set(ilgiler || []);
+  const perde = yap("div", "perde");
+  const p = yap("div", "pencere");
+  p.append(yap("h2", "", "Neleri seversin? ✨"), yap("p", "", "Seçtiğin alanlara göre sana özel bir akış hazırlayalım. İstediğin kadar seçebilirsin, sonra istediğin zaman değiştirebilirsin."));
+  const kutu = yap("div", "secenekler");
+  KATEGORILER.forEach(k => {
+    const b = yap("button", secili.has(k) ? "secili" : "", (KATEGORI_SIMGE[k] || "") + " " + k);
+    b.onclick = () => { if (secili.has(k)) secili.delete(k); else secili.add(k); b.classList.toggle("secili", secili.has(k)); };
+    kutu.append(b);
+  });
+  const kapat = () => { perde.remove(); goster(); };
+  const atla = yap("button", "ikincil", ilgiler ? "Vazgeç" : "Şimdilik geç");
+  atla.onclick = () => { if (!ilgiler) { ilgiler = []; kaydet("ilgiler", ilgiler); } kapat(); };
+  const tamam = yap("button", "ana-dugme", "Kaydet");
+  tamam.onclick = () => { ilgiler = [...secili]; kaydet("ilgiler", ilgiler); if (ilgiler.length) sekme = "ozel"; kapat(); window.scrollTo(0, 0); };
+  const dug = yap("div", "dugmeler");
+  dug.append(atla, tamam);
+  p.append(kutu, dug);
+  perde.append(p);
+  perde.onclick = e => { if (e.target === perde) atla.onclick(); };
+  document.body.append(perde);
+}
+
+function benimMi(v) {
+  return (ilgiler || []).includes(v.kategori) || favoriler.has(v.kanalId);
+}
+
+function oneriHazirla() {
+  const ilgiVar = (ilgiler || []).length > 0;
+  const uygun = v => !ilgiVar || benimMi(v);
+  const karistir = l => [...l].sort(() => Math.random() - 0.5);
+  const taze = akis.filter(v => v.durum === "none" && !shortsMu(v) && Date.now() - new Date(v.tarih) < 4 * 86400000);
+  const havuz = karistir(taze.filter(uygun)).concat(karistir(taze.filter(v => !uygun(v))));
+  const canli = akis.filter(v => v.durum === "live" && uygun(v));
+  const secim = [], kanallar = new Set();
+  if (canli.length) { const c = canli[Math.floor(Math.random() * canli.length)]; secim.push(c); kanallar.add(c.kanalId); }
+  havuz.forEach(v => { if (secim.length < 3 && !kanallar.has(v.kanalId)) { secim.push(v); kanallar.add(v.kanalId); } });
+  oneriSecim = secim;
+}
+
+function bolumBasligi(baslik, altYazi, dugmeYazi, dugmeIs) {
+  const b = yap("div", "bolum");
+  const sol = yap("div");
+  sol.append(baslik);
+  if (altYazi) { sol.append(yap("br")); sol.append(yap("span", "alt-yazi", altYazi)); }
+  b.append(sol);
+  if (dugmeYazi) { const d = yap("button", "", dugmeYazi); d.onclick = dugmeIs; b.append(d); }
+  return b;
 }
 
 function gundemKart(o) {
@@ -213,6 +317,38 @@ function goster() {
   let videolar = [];
   let bosMesaj = "Burada şimdilik bir şey yok.";
   let shortsFiltresi = true;
+  const kutuListe = document.getElementById("liste");
+
+  if (sekme === "oneri") {
+    kutuListe.replaceChildren(bolumBasligi("🎲 Bu akşam ne izlesem?", (ilgiler || []).length ? "İlgi alanlarına ve favorilerine göre seçildi" : "Son günlerin videolarından rastgele seçildi", "🔄 Başka öner", () => { oneriHazirla(); goster(); }));
+    if (!oneriSecim.length) { kutuListe.append(yap("div", "bos", "Şu an önerecek video bulamadım. Biraz sonra tekrar dene!")); return; }
+    oneriSecim.forEach(v => kutuListe.append(kart(v, false)));
+    return;
+  }
+  if (sekme === "ozel") {
+    if (!(ilgiler || []).length && !favoriler.size) {
+      kutuListe.replaceChildren(bolumBasligi("✨ Sana özel", "Henüz ilgi alanı seçmedin", "İlgi alanlarını seç", ilgiPenceresi));
+      kutuListe.append(yap("div", "bos", "Sevdiğin konuları seç, bu sayfa sadece onlarla dolsun."));
+      return;
+    }
+    const aranirsa = v => !aranan || (v.baslik + " " + v.kanal).toLocaleLowerCase("tr").includes(aranan);
+    const yakinda = yaklasanlar().filter(v => benimMi(v) && aranirsa(v) && new Date(v.planlanan) - Date.now() < 86400000);
+    const sayac = {};
+    const akisim = akis
+      .filter(v => benimMi(v) && v.durum !== "upcoming" && !(shortsGizle && shortsMu(v)) && aranirsa(v))
+      .sort((a, b) => (b.durum === "live") - (a.durum === "live") || new Date(b.tarih) - new Date(a.tarih))
+      .filter(v => (sayac[v.kanalId] = (sayac[v.kanalId] || 0) + 1) <= 2)
+      .slice(0, 60);
+    kutuListe.replaceChildren(bolumBasligi("✨ Sana özel", (ilgiler || []).join(", ") || "Favori kanalların", "İlgi alanlarını düzenle", ilgiPenceresi));
+    if (yakinda.length) {
+      kutuListe.append(bolumBasligi("📅 Önümüzdeki 24 saatte", "Hatırlatma için takvimine ekleyebilirsin"));
+      yakinda.forEach(v => kutuListe.append(kart(v, false)));
+      kutuListe.append(bolumBasligi("🎬 Senin için son videolar"));
+    }
+    if (!akisim.length) { kutuListe.append(yap("div", "bos", "Seçtiğin alanlarda şu an video yok.")); return; }
+    akisim.forEach(v => kutuListe.append(kart(v, false)));
+    return;
+  }
 
   if (sekme === "trend") {
     videolar = trend;
@@ -301,6 +437,7 @@ document.querySelectorAll("#sekmeler button").forEach(b => {
   b.onclick = () => { sekme = b.dataset.sekme; goster(); window.scrollTo(0, 0); };
 });
 konulariKur();
+document.getElementById("zarButon").onclick = () => { sekme = "oneri"; oneriHazirla(); goster(); window.scrollTo(0, 0); };
 KATEGORILER.forEach(k => {
   const b = yap("button", "", k);
   b.onclick = () => { secilenKategori = k; goster(); };
@@ -320,6 +457,7 @@ shortsKutusu.onchange = () => {
 };
 
 yukle();
+if (ilgiler === null) ilgiPenceresi();
 setInterval(() => { if (document.visibilityState === "visible") yukle(); }, BES_DK);
 setInterval(ustBilgiGuncelle, 60000);
 document.addEventListener("visibilitychange", () => {
