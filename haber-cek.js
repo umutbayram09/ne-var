@@ -1,4 +1,20 @@
 const fs = require("fs");
+// Sadece YouTube dünyasıyla ilgili haberleri tutar: genel anahtar kelimeler + listedeki içerik üreticilerinin adları.
+const GENEL = ["youtube", "youtuber", "twitch", "kick yayıncısı", "içerik üreticisi", "sosyal medya fenomeni"];
+const KISI_KATEGORILERI = ["Eğlence ve Tepki", "Oyun", "Komedi ve Skeç", "Sohbet ve Podcast", "Aile ve Vlog", "Bilgi ve Belgesel", "Yemek", "Gezi", "Güzellik ve Moda", "Teknoloji"];
+const BELIRSIZ = ["hayrettin", "beyaz kurt", "mantra", "tamer", "edis", "tefo", "lia minecraft", "onedio", "webtekno", "technopat", "teknoseyir", "megabayt", "shiftdelete.net", "donanımhaber", "yemek.com", "masterchef türkiye", "nefis yemek tarifleri", "arabam.com", "otokolik", "motor1 türkiye"];
+const kucuk = s => (s || "").toLocaleLowerCase("tr");
+let kanalAdlari = [];
+try {
+  kanalAdlari = JSON.parse(fs.readFileSync("data/kanallar.json", "utf8"))
+    .filter(k => k.id && KISI_KATEGORILERI.includes(k.kategori))
+    .map(k => kucuk(k.ad))
+    .filter(ad => ad.length >= 5 && !BELIRSIZ.includes(ad));
+} catch (e) {}
+const ARANANLAR = [...new Set(GENEL.concat(kanalAdlari))];
+const HARF = "a-zçğıöşüâîû0-9";
+const kalip = ARANANLAR.map(k => [k, new RegExp("(^|[^" + HARF + "])" + k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "($|[^" + HARF + "])")]);
+const eslesen = metin => { const m = kucuk(metin); const bulunan = kalip.find(([, r]) => r.test(m)); return bulunan ? bulunan[0] : null; };
 const satirlar = fs.readFileSync("haber-kaynaklari.txt", "utf8").split("\n").map(s => s.trim()).filter(s => s && !s.startsWith("#"));
 const cozum = s => (s || "")
   .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
@@ -35,17 +51,20 @@ const ayikla = (xml, kaynak, konu) => {
   }).filter(h => h.baslik && /^https?:\/\//i.test(h.link));
 };
 (async () => {
-  const sinir = Date.now() - 3 * 86400000;
+  const sinir = Date.now() - 7 * 86400000;
   const tum = [], rapor = [];
   for (const satir of satirlar) {
     const [kaynak, konu, url] = satir.split("|").map(s => (s || "").trim());
     if (!url) continue;
     try {
-      const haberler = ayikla(await oku(url), kaynak, konu)
+      const tumu = ayikla(await oku(url), kaynak, konu);
+      const haberler = tumu
         .filter(h => !h.tarih || new Date(h.tarih).getTime() > sinir)
-        .slice(0, 20);
+        .map(h => Object.assign(h, { eslesen: eslesen(h.baslik + " " + h.ozet) }))
+        .filter(h => h.eslesen)
+        .slice(0, 30);
       tum.push(...haberler);
-      rapor.push({ kaynak, konu, url, durum: haberler.length ? "OK" : "BOS", adet: haberler.length });
+      rapor.push({ kaynak, konu, url, durum: tumu.length ? "OK" : "BOS", okunan: tumu.length, adet: haberler.length });
     } catch (e) {
       rapor.push({ kaynak, konu, url, durum: "HATA", adet: 0, hata: e.message });
     }
@@ -59,9 +78,10 @@ const ayikla = (xml, kaynak, konu) => {
     .slice(0, 500);
   fs.mkdirSync("data", { recursive: true });
   fs.writeFileSync("data/haberler.json", JSON.stringify({ guncelleme: simdi, haberler, kaynaklar: rapor }, null, 2));
-  rapor.forEach(r => console.log((r.durum + "     ").slice(0, 6) + r.kaynak + "  (" + r.adet + " haber)" + (r.hata ? "  " + r.hata : "")));
+  rapor.forEach(r => console.log((r.durum + "     ").slice(0, 6) + r.kaynak + "  (" + (r.okunan || 0) + " haber okundu, " + r.adet + " tanesi YouTube ile ilgili)" + (r.hata ? "  " + r.hata : "")));
   console.log("");
-  console.log("Toplam: " + haberler.length + " haber | calisan kaynak: " + rapor.filter(r => r.durum === "OK").length + "/" + rapor.length);
+  console.log("Aranan kelime/kanal sayisi: " + ARANANLAR.length);
+  console.log("Toplam: " + haberler.length + " YouTube haberi | calisan kaynak: " + rapor.filter(r => r.durum === "OK").length + "/" + rapor.length);
   const sorunlu = rapor.filter(r => r.durum !== "OK");
   if (sorunlu.length) console.log("Sorunlu kaynaklar: " + sorunlu.map(r => r.kaynak).join(", "));
 })().catch(e => { console.error(e.message); process.exit(1); });

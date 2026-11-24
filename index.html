@@ -61,7 +61,7 @@
     <button data-sekme="canli" id="canliButon">🔴 Canlı</button>
     <button data-sekme="yaklasan" id="yaklasanButon">📅 Yaklaşan</button>
     <button data-sekme="yeni">🆕 Yeni</button>
-    <button data-sekme="haber">📰 Haberler</button>
+    <button data-sekme="gundem">📣 YouTube Gündemi</button>
     <button data-sekme="favori">⭐ Favorilerim</button>
     <button data-sekme="kategori">📂 Kategoriler</button>
   </nav>
@@ -69,13 +69,14 @@
   <nav id="konular" class="alt" hidden></nav>
 </header>
 <main id="liste"></main>
-<footer>Video verileri YouTube Data API ile alınmaktadır. Haber başlıkları kaynak sitelerin RSS akışlarından gelir ve her haber kendi sitesinde açılır. Bu site YouTube ile bağlantılı değildir.</footer>
+<footer>Video verileri YouTube Data API ile alınmaktadır. Gündem cümleleri bu verilerden otomatik üretilir. Basında çıkan haberler kaynak sitelerin RSS akışlarından gelir ve kendi sitelerinde açılır. Bu site YouTube ile bağlantılı değildir.</footer>
 <script>
 const KATEGORILER = ["Gündem ve Haber", "Spor", "Eğlence ve Tepki", "Oyun", "Müzik", "Komedi ve Skeç", "Sohbet ve Podcast", "Bilgi ve Belgesel", "Teknoloji", "Yemek", "Eğitim", "Otomobil", "Gezi", "Güzellik ve Moda", "Aile ve Vlog"];
-const KONU_SIMGE = { "Gündem": "📰", "Dünya": "🌍", "Ekonomi": "💰", "Spor": "⚽", "Teknoloji": "💻", "Oyun": "🎮", "Magazin": "⭐", "Sinema ve Dizi": "🎬" };
+const GUNDEM_TUR = { trend: ["🔥", "Trend"], zirve: ["👑", "Trend"], canli: ["🔴", "Canlı"], plan: ["📅", "Planlanan"], esik: ["🚀", "Rekor"], basin: ["📰", "Basında"] };
+const GUNDEM_FILTRE = ["Tümü", "Trend", "Canlı", "Planlanan", "Rekor", "Basında"];
 const GUNLER = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
 const BES_DK = 5 * 60 * 1000;
-let trend = [], akis = [], haberler = [], sekme = "trend", secilenKategori = KATEGORILER[0], secilenKonu = "Tümü";
+let trend = [], akis = [], gundem = [], sekme = "trend", secilenKategori = KATEGORILER[0], secilenKonu = "Tümü";
 let aranan = "", arananHam = "", guncellemeZamani = null, sonYukleme = 0;
 
 function oku(ad, varsayilan) {
@@ -155,26 +156,28 @@ function kart(v, siraGoster) {
   return kutu;
 }
 
-function haberKart(h) {
+function gundemKart(o) {
+  const tur = GUNDEM_TUR[o.tur] || ["📣", ""];
   const kutu = yap("div", "kart haber");
   const a = yap("a");
-  a.href = h.link;
+  a.href = o.tur === "basin" ? o.link : "https://www.youtube.com/watch?v=" + o.videoId;
   a.target = "_blank";
   a.rel = "noopener";
   let gorsel;
-  if (h.resim) {
+  if (o.resim) {
     gorsel = yap("img");
-    gorsel.src = h.resim;
+    gorsel.src = o.resim;
     gorsel.alt = "";
     gorsel.loading = "lazy";
     gorsel.referrerPolicy = "no-referrer";
-    gorsel.onerror = () => gorsel.replaceWith(yap("div", "yer", KONU_SIMGE[h.konu] || "📰"));
+    gorsel.onerror = () => gorsel.replaceWith(yap("div", "yer", tur[0]));
   } else {
-    gorsel = yap("div", "yer", KONU_SIMGE[h.konu] || "📰");
+    gorsel = yap("div", "yer", tur[0]);
   }
   const bilgi = yap("div", "bilgi");
-  bilgi.append(yap("div", "baslik", h.baslik), yap("div", "kanal", h.kaynak + " · " + neZaman(h.tarih)));
-  if (h.ozet) bilgi.append(yap("div", "ozet", h.ozet));
+  bilgi.append(yap("div", "baslik", o.metin));
+  bilgi.append(yap("div", "kanal", tur[0] + " " + (o.tur === "basin" ? o.kaynak : tur[1]) + " · " + neZaman(o.tarih)));
+  if (o.ozet) bilgi.append(yap("div", "ozet", o.ozet));
   a.append(gorsel, bilgi);
   kutu.append(a);
   return kutu;
@@ -183,10 +186,9 @@ function haberKart(h) {
 function konulariKur() {
   const nav = document.getElementById("konular");
   nav.replaceChildren();
-  const konular = ["Tümü", ...Object.keys(KONU_SIMGE).filter(k => haberler.some(h => h.konu === k))];
-  if (!konular.includes(secilenKonu)) secilenKonu = "Tümü";
-  konular.forEach(k => {
-    const b = yap("button", "", k === "Tümü" ? k : (KONU_SIMGE[k] + " " + k));
+  GUNDEM_FILTRE.forEach(k => {
+    const simge = Object.values(GUNDEM_TUR).find(t => t[1] === k);
+    const b = yap("button", "", simge ? simge[0] + " " + k : k);
     b.dataset.konu = k;
     b.onclick = () => { secilenKonu = k; goster(); window.scrollTo(0, 0); };
     nav.append(b);
@@ -206,7 +208,7 @@ function goster() {
   document.querySelectorAll("#kategoriler button").forEach(b => b.classList.toggle("aktif", b.textContent === secilenKategori));
   document.getElementById("kategoriler").hidden = sekme !== "kategori";
   document.querySelectorAll("#konular button").forEach(b => b.classList.toggle("aktif", b.dataset.konu === secilenKonu));
-  document.getElementById("konular").hidden = sekme !== "haber";
+  document.getElementById("konular").hidden = sekme !== "gundem";
 
   let videolar = [];
   let bosMesaj = "Burada şimdilik bir şey yok.";
@@ -228,16 +230,16 @@ function goster() {
       .filter(v => v.durum === "none" && !(shortsGizle && shortsMu(v)))
       .filter(v => (sayac[v.kanalId] = (sayac[v.kanalId] || 0) + 1) <= 2)
       .slice(0, 60);
-  } else if (sekme === "haber") {
-    let liste = haberler.filter(h => secilenKonu === "Tümü" || h.konu === secilenKonu);
-    if (aranan) liste = liste.filter(h => (h.baslik + " " + h.kaynak).toLocaleLowerCase("tr").includes(aranan));
+  } else if (sekme === "gundem") {
+    let liste = gundem.filter(o => secilenKonu === "Tümü" || (GUNDEM_TUR[o.tur] || [])[1] === secilenKonu);
+    if (aranan) liste = liste.filter(o => (o.metin + " " + (o.kanal || "") + " " + (o.kaynak || "")).toLocaleLowerCase("tr").includes(aranan));
     const kutu = document.getElementById("liste");
     kutu.replaceChildren();
     if (!liste.length) {
-      kutu.append(yap("div", "bos", aranan ? "“" + arananHam + "” için haber bulunamadı." : "Şu an gösterilecek haber yok."));
+      kutu.append(yap("div", "bos", aranan ? "“" + arananHam + "” için gündemde bir şey bulunamadı." : "Gündem birikiyor. Veriler her 30 dakikada güncellendikçe burası dolacak."));
       return;
     }
-    liste.slice(0, 150).forEach(h => kutu.append(haberKart(h)));
+    liste.slice(0, 150).forEach(o => kutu.append(gundemKart(o)));
     return;
   } else if (sekme === "favori") {
     const gorulen = new Set();
@@ -279,12 +281,13 @@ function yukle() {
   return Promise.all([
     fetch("data/trend.json" + taze).then(r => r.json()),
     fetch("data/akis.json" + taze).then(r => r.json()),
+    fetch("data/gundem.json" + taze).then(r => r.json()).catch(() => ({ olaylar: [] })),
     fetch("data/haberler.json" + taze).then(r => r.json()).catch(() => ({ haberler: [] }))
-  ]).then(([t, a, h]) => {
+  ]).then(([t, a, g, h]) => {
     trend = t.videolar.map((v, i) => Object.assign(v, { sira: i + 1 }));
     akis = a.videolar;
-    haberler = h.haberler || [];
-    konulariKur();
+    const basin = (h.haberler || []).map(x => ({ tur: "basin", metin: x.baslik, ozet: x.ozet, link: x.link, kaynak: x.kaynak, resim: x.resim, tarih: x.tarih }));
+    gundem = (g.olaylar || []).concat(basin).sort((x, y) => new Date(y.tarih) - new Date(x.tarih));
     guncellemeZamani = a.guncelleme;
     sonYukleme = Date.now();
     ustBilgiGuncelle();
@@ -297,6 +300,7 @@ function yukle() {
 document.querySelectorAll("#sekmeler button").forEach(b => {
   b.onclick = () => { sekme = b.dataset.sekme; goster(); window.scrollTo(0, 0); };
 });
+konulariKur();
 KATEGORILER.forEach(k => {
   const b = yap("button", "", k);
   b.onclick = () => { secilenKategori = k; goster(); };
