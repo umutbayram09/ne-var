@@ -102,7 +102,8 @@ function goster() {
     videolar = akis.filter(v => v.durum === "live").sort((a, b) => b.izleyen - a.izleyen);
     bosMesaj = "Şu an listedeki kanallarda canlı yayın yok. Biraz sonra tekrar bak!";
   } else if (sekme === "yeni") {
-    videolar = akis.filter(v => v.durum === "none").slice(0, 60);
+        const sayac = {};
+    videolar = akis.filter(v => v.durum === "none" && (sayac[v.kanalId] = (sayac[v.kanalId] || 0) + 1) <= 2).slice(0, 60);
   } else {
     videolar = akis.filter(v => v.kategori === secilenKategori && v.durum !== "upcoming");
   }
