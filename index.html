@@ -71,8 +71,7 @@ const GUNLER = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
 const BES_DK = 5 * 60 * 1000;
 let trend = [], akis = [], sekme = "trend", secilenKategori = KATEGORILER[0];
 let aranan = "", arananHam = "", guncellemeZamani = null, sonYukleme = 0;
-
-function oku(ad, varsayilan) {
+  function oku(ad, varsayilan) {
   try { const d = localStorage.getItem(ad); return d === null ? varsayilan : JSON.parse(d); } catch (e) { return varsayilan; }
 }
 function kaydet(ad, deger) {
@@ -131,3 +130,135 @@ function kart(v, siraGoster) {
     detay.append(yap("span", "rozet planli", "PLANLI"), saatYaz(v.planlanan || v.tarih));
   } else {
     detay.append(sayi(v.izlenme) + " izlenme · " + neZaman(v.tarih));
+  }
+  const bilgi = yap("div", "bilgi");
+  bilgi.append(baslik, yap("div", "kanal", v.kanal), detay);
+  a.append(img, bilgi);
+
+  const favori = favoriler.has(v.kanalId);
+  const yildiz = yap("button", "yildiz" + (favori ? " dolu" : ""), favori ? "★" : "☆");
+  yildiz.title = favori ? "Favorilerden çıkar" : "Kanalı favorilere ekle";
+  yildiz.setAttribute("aria-label", yildiz.title);
+  yildiz.onclick = () => {
+    if (favoriler.has(v.kanalId)) favoriler.delete(v.kanalId); else favoriler.add(v.kanalId);
+    kaydet("favoriler", [...favoriler]);
+    goster();
+  };
+  kutu.append(a, yildiz);
+  return kutu;
+}
+  
+function yaklasanlar() {
+  const simdi = Date.now();
+  return akis
+    .filter(v => v.durum === "upcoming" && v.planlanan)
+    .filter(v => { const t = new Date(v.planlanan).getTime(); return t > simdi - 2 * 3600000 && t < simdi + 7 * 86400000; })
+    .sort((a, b) => new Date(a.planlanan) - new Date(b.planlanan));
+}
+
+function goster() {
+  document.querySelectorAll("#sekmeler button").forEach(b => b.classList.toggle("aktif", b.dataset.sekme === sekme));
+  document.querySelectorAll("#kategoriler button").forEach(b => b.classList.toggle("aktif", b.textContent === secilenKategori));
+  document.getElementById("kategoriler").hidden = sekme !== "kategori";
+
+  let videolar = [];
+  let bosMesaj = "Burada şimdilik bir şey yok.";
+  let shortsFiltresi = true;
+
+  if (sekme === "trend") {
+    videolar = trend;
+  } else if (sekme === "canli") {
+    videolar = akis.filter(v => v.durum === "live").sort((a, b) => b.izleyen - a.izleyen);
+    bosMesaj = "Şu an listedeki kanallarda canlı yayın yok. Biraz sonra tekrar bak!";
+    shortsFiltresi = false;
+  } else if (sekme === "yaklasan") {
+    videolar = yaklasanlar();
+    bosMesaj = "Listedeki kanalların önümüzdeki günler için planlanmış yayını yok.";
+    shortsFiltresi = false;
+  } else if (sekme === "yeni") {
+    const sayac = {};
+    videolar = akis
+      .filter(v => v.durum === "none" && !(shortsGizle && shortsMu(v)))
+      .filter(v => (sayac[v.kanalId] = (sayac[v.kanalId] || 0) + 1) <= 2)
+      .slice(0, 60);
+  } else if (sekme === "favori") {
+    const gorulen = new Set();
+    videolar = akis.concat(trend)
+      .filter(v => favoriler.has(v.kanalId) && v.durum !== "upcoming" && !gorulen.has(v.id) && gorulen.add(v.id))
+      .sort((a, b) => new Date(b.tarih) - new Date(a.tarih));
+    bosMesaj = favoriler.size
+      ? "Favori kanallarının şu an listede videosu yok."
+      : "Henüz favori kanalın yok. Kartlardaki ☆ işaretine dokunarak kanal ekleyebilirsin.";
+  } else {
+    videolar = akis.filter(v => v.kategori === secilenKategori && v.durum !== "upcoming");
+  }
+
+  if (shortsFiltresi && shortsGizle) videolar = videolar.filter(v => !shortsMu(v));
+  if (aranan) {
+    videolar = videolar.filter(v => (v.baslik + " " + v.kanal).toLocaleLowerCase("tr").includes(aranan));
+    bosMesaj = "“" + arananHam + "” için bu sekmede sonuç yok.";
+  }
+
+  const liste = document.getElementById("liste");
+  liste.replaceChildren();
+  if (!videolar.length) {
+    liste.append(yap("div", "bos", bosMesaj));
+    return;
+  }
+  videolar.forEach(v => liste.append(kart(v, sekme === "trend")));
+}
+  function ustBilgiGuncelle() {
+  if (guncellemeZamani) document.getElementById("guncelleme").textContent = "Son güncelleme: " + neZaman(guncellemeZamani);
+  const canli = akis.filter(v => v.durum === "live").length;
+  document.getElementById("canliButon").textContent = "🔴 Canlı" + (canli ? " (" + canli + ")" : "");
+  const yaklasan = yaklasanlar().length;
+  document.getElementById("yaklasanButon").textContent = "📅 Yaklaşan" + (yaklasan ? " (" + yaklasan + ")" : "");
+}
+
+function yukle() {
+  const taze = "?" + Date.now();
+  return Promise.all([
+    fetch("data/trend.json" + taze).then(r => r.json()),
+    fetch("data/akis.json" + taze).then(r => r.json())
+  ]).then(([t, a]) => {
+    trend = t.videolar.map((v, i) => Object.assign(v, { sira: i + 1 }));
+    akis = a.videolar;
+    guncellemeZamani = a.guncelleme;
+    sonYukleme = Date.now();
+    ustBilgiGuncelle();
+    goster();
+  }).catch(() => {
+    if (!sonYukleme) document.getElementById("guncelleme").textContent = "Veri yüklenemedi.";
+  });
+}
+
+document.querySelectorAll("#sekmeler button").forEach(b => {
+  b.onclick = () => { sekme = b.dataset.sekme; goster(); window.scrollTo(0, 0); };
+});
+KATEGORILER.forEach(k => {
+  const b = yap("button", "", k);
+  b.onclick = () => { secilenKategori = k; goster(); };
+  document.getElementById("kategoriler").append(b);
+});
+document.getElementById("arama").oninput = e => {
+  arananHam = e.target.value.trim();
+  aranan = arananHam.toLocaleLowerCase("tr");
+  goster();
+};
+const shortsKutusu = document.getElementById("shorts");
+shortsKutusu.checked = shortsGizle;
+shortsKutusu.onchange = () => {
+  shortsGizle = shortsKutusu.checked;
+  kaydet("shortsGizle", shortsGizle);
+  goster();
+};
+
+yukle();
+setInterval(() => { if (document.visibilityState === "visible") yukle(); }, BES_DK);
+setInterval(ustBilgiGuncelle, 60000);
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && Date.now() - sonYukleme > BES_DK) yukle();
+});
+</script>
+</body>
+</html>
