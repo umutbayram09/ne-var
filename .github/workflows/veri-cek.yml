@@ -18,6 +18,11 @@ jobs:
         with:
           node-version: 22
 
+      - name: Eski veriyi sakla
+        run: |
+          cp data/trend.json /tmp/eski-trend.json 2>/dev/null || true
+          cp data/akis.json /tmp/eski-akis.json 2>/dev/null || true
+
       - name: Trend videolari cek
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
@@ -93,11 +98,14 @@ jobs:
           })().catch(e => { console.error(e.message); process.exit(1); });
           '
 
+      - name: YouTube gundemini uret
+        run: node gundem-yap.js
+
       - name: Kaydet
         run: |
           git config user.name "ne-var-bot"
           git config user.email "actions@github.com"
-          git add data/trend.json data/akis.json
+          git add data/trend.json data/akis.json data/gundem.json
           git diff --staged --quiet || git commit -m "Veriler guncellendi"
           git pull --rebase
           git push
