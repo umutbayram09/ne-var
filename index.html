@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ne Var? – Şimdi YouTube'da ne var</title>
+<style>
+  :root { --bg:#0f0f12; --kart:#1b1b21; --yazi:#f2f2f2; --soluk:#9a9aa5; --vurgu:#ff3b5c; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--yazi); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  header { position:sticky; top:0; background:var(--bg); padding:16px 16px 0; z-index:10; }
+  h1 { font-size:22px; }
+  h1 span { color:var(--vurgu); }
+  .guncelleme { color:var(--soluk); font-size:12px; margin-top:4px; }
+  nav { display:flex; gap:8px; overflow-x:auto; padding:12px 0; }
+  nav button { flex:none; border:0; border-radius:999px; padding:8px 14px; background:var(--kart); color:var(--yazi); font-size:14px; }
+  nav button.aktif { background:var(--vurgu); }
+  nav button:disabled { opacity:.45; }
+  main { padding:8px 16px 32px; display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); }
+  a.kart { display:flex; gap:12px; background:var(--kart); border-radius:12px; padding:10px; color:inherit; text-decoration:none; }
+  a.kart img { width:140px; aspect-ratio:16/9; object-fit:cover; border-radius:8px; flex:none; }
+  .bilgi { min-width:0; display:flex; flex-direction:column; gap:4px; }
+  .baslik { font-size:14px; font-weight:600; line-height:1.3; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+  .kanal, .detay { font-size:12px; color:var(--soluk); }
+  .sira { color:var(--vurgu); font-weight:700; }
+  footer { text-align:center; color:var(--soluk); font-size:11px; padding:0 16px 24px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Ne <span>Var?</span></h1>
+  <div class="guncelleme" id="guncelleme">Yükleniyor…</div>
+  <nav>
+    <button class="aktif">🔥 Trend</button>
+    <button disabled>🔴 Canlı · yakında</button>
+    <button disabled>🆕 Yeni · yakında</button>
+    <button disabled>📂 Kategoriler · yakında</button>
+  </nav>
+</header>
+<main id="liste"></main>
+<footer>Veriler YouTube Data API ile alınmaktadır. Bu site YouTube ile bağlantılı değildir.</footer>
+<script>
+function neZaman(t) {
+  const dk = Math.floor((Date.now() - new Date(t)) / 60000);
+  if (dk < 1) return "az önce";
+  if (dk < 60) return dk + " dk önce";
+  const sa = Math.floor(dk / 60);
+  if (sa < 24) return sa + " saat önce";
+  return Math.floor(sa / 24) + " gün önce";
+}
+function izlenme(n) {
+  return new Intl.NumberFormat("tr-TR", { notation: "compact" }).format(n) + " izlenme";
+}
+function yap(etiket, sinif, yazi) {
+  const e = document.createElement(etiket);
+  if (sinif) e.className = sinif;
+  if (yazi) e.textContent = yazi;
+  return e;
+}
+fetch("data/trend.json?" + Date.now())
+  .then(r => r.json())
+  .then(veri => {
+    document.getElementById("guncelleme").textContent = "Son güncelleme: " + neZaman(veri.guncelleme);
+    const liste = document.getElementById("liste");
+    veri.videolar.forEach((v, i) => {
+      const a = yap("a", "kart");
+      a.href = "https://www.youtube.com/watch?v=" + v.id;
+      a.target = "_blank";
+      a.rel = "noopener";
+      const img = yap("img");
+      img.src = v.resim;
+      img.alt = "";
+      img.loading = "lazy";
+      const baslik = yap("div", "baslik");
+      baslik.append(yap("span", "sira", (i + 1) + ". "), v.baslik);
+      const detay = (v.canli ? "🔴 Canlı · " : "") + izlenme(v.izlenme) + " · " + neZaman(v.tarih);
+      const bilgi = yap("div", "bilgi");
+      bilgi.append(baslik, yap("div", "kanal", v.kanal), yap("div", "detay", detay));
+      a.append(img, bilgi);
+      liste.append(a);
+    });
+  })
+  .catch(() => {
+    document.getElementById("guncelleme").textContent = "Veri yüklenemedi.";
+  });
+</script>
+</body>
+</html>
