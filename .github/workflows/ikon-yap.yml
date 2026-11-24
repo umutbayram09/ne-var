@@ -1,0 +1,45 @@
+name: Ikon yap
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ikon:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ikonlari ciz
+        run: |
+          pip install pillow
+          python3 - <<'EOF'
+          from PIL import Image, ImageDraw, ImageFont
+          def yazi_tipi(boy):
+              try:
+                  return ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", boy)
+              except OSError:
+                  return ImageFont.load_default(size=boy)
+          def ikon(s, ad):
+              im = Image.new("RGB", (s, s), "#0f0f12")
+              d = ImageDraw.Draw(im)
+              f = yazi_tipi(int(s * 0.27))
+              for metin, renk, y in [("Ne", "#f2f2f2", 0.36), ("Var?", "#ff3b5c", 0.64)]:
+                  w = d.textlength(metin, font=f)
+                  d.text(((s - w) / 2, s * y), metin, font=f, fill=renk, anchor="lm")
+              im.save(ad)
+          ikon(192, "ikon-192.png")
+          ikon(512, "ikon-512.png")
+          print("Ikonlar hazir")
+          EOF
+
+      - name: Kaydet
+        run: |
+          git config user.name "ne-var-bot"
+          git config user.email "actions@github.com"
+          git add ikon-192.png ikon-512.png
+          git diff --staged --quiet || git commit -m "Uygulama ikonlari"
+          git pull --rebase
+          git push
