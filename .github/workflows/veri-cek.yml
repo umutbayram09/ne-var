@@ -1,0 +1,52 @@
+name: Veri cek
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cek:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Trend videolari cek
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          mkdir -p data
+          node -e '
+          const key = process.env.YOUTUBE_API_KEY;
+          const url = "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&chart=mostPopular&regionCode=TR&maxResults=50&key=" + key;
+          fetch(url).then(r => r.json()).then(j => {
+            if (j.error) { console.error(j.error.message); process.exit(1); }
+            const videolar = j.items.map(v => ({
+              id: v.id,
+              baslik: v.snippet.title,
+              kanal: v.snippet.channelTitle,
+              kanalId: v.snippet.channelId,
+              tarih: v.snippet.publishedAt,
+              resim: (v.snippet.thumbnails.medium || v.snippet.thumbnails.default).url,
+              izlenme: Number(v.statistics?.viewCount || 0),
+              canli: v.snippet.liveBroadcastContent === "live"
+            }));
+            require("fs").writeFileSync("data/trend.json", JSON.stringify({ guncelleme: new Date().toISOString(), videolar }, null, 2));
+            console.log(videolar.length + " video kaydedildi");
+          });
+          '
+
+      - name: Kaydet
+        run: |
+          git config user.name "ne-var-bot"
+          git config user.email "actions@github.com"
+          git add data/trend.json
+          git diff --staged --quiet || git commit -m "Trend verisi guncellendi"
+          git push
