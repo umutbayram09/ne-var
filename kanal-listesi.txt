@@ -44,10 +44,11 @@ Aile ve Vlog | Atik Ailesi | @atikailesi
 Aile ve Vlog | Duygu Özaslan | @duyguozaslan
 Aile ve Vlog | Merve Özkaynak | @merveozkaynak
 Oyun | Elraenn | UC51-ljNFrvY5ZmV0C_61XcA
-Oyun | Jahrein | @jahrein
-Oyun | wtcN | @wtcN
+Oyun | Jahrein |
+Oyun | wtcN |
 Oyun | Burak Oyunda | @BurakOyunda
-Oyun | Unlost | @Unlost
+Oyun | Pintipanda |
+Oyun | Unlost |
 Oyun | Ferited | UCKizsKkBBjuEoY_fgRx-4QQ
 Oyun | Rüyaperest | UC5QcoWzRKJaFk6G7N3vevWg
 Oyun | TAMER | UCu-OwDLiQfgYPHk2d8AwMdQ
@@ -62,32 +63,32 @@ Müzik | Tefo | UCEq2-c14ukWTAw_FfMLyiFw
 Müzik | Tarkan | @tarkan
 Müzik | Hadise | @hadise
 Müzik | Edis | @edis
-Müzik | Semicenk | @semicenk
+Müzik | Semicenk |
 Müzik | Mabel Matiz | @mabelmatiz
 Müzik | Netd Müzik | @netdmuzik
-Müzik | DMC | @dmc
+Müzik | DMC Doğan Music Company |
 Yemek | Refika'nın Mutfağı | @RefikaninMutfagi
 Yemek | Arda'nın Mutfağı | @ArdaninMutfagi
 Yemek | Nefis Yemek Tarifleri | @nefisyemektarifleri
 Yemek | Yemek.com | @yemekcom
 Yemek | CZN Burak | @cznburak
 Yemek | MasterChef Türkiye | @MasterChefTurkiye
-Yemek | Somer Sivrioğlu | @somersivrioglu
-Yemek | Danilo Zanna | @DaniloZanna
-Teknoloji | Webtekno | @webtekno
+Yemek | Somer Sivrioğlu |
+Yemek | Danilo Zanna |
+Teknoloji | Webtekno |
 Teknoloji | ShiftDelete.Net | @shiftdeletenet
 Teknoloji | Teknoseyir | @teknoseyir
 Teknoloji | Technopat | @technopat
-Teknoloji | DonanımHaber | @donanimhaber
-Teknoloji | Megabayt | @megabayt
+Teknoloji | DonanımHaber |
+Teknoloji | Megabayt |
 Teknoloji | Enis Kirazoğlu | UCXin0u5SrVEBjn5LhOoG97A
-Otomobil | Otokolik | @otokolik
-Otomobil | arabam.com | @arabamcom
+Otomobil | Otokolik |
+Otomobil | arabam.com |
 Otomobil | Motor1 Türkiye | @motor1turkiye
 Gezi | Murat Soner | @muratsoner
-Gezi | Yasin Obuz | @YasinObuz
-Güzellik ve Moda | Hande Sarıoğlu | @handesarioglu
-Güzellik ve Moda | Ece Ronay | @eceronay
+Gezi | Yasin Obuz |
+Güzellik ve Moda | Hande Sarıoğlu |
+Güzellik ve Moda | Ece Ronay |
 Eğitim | Tonguç Akademi | @TongucAkademi
 Eğitim | Benim Hocam | @BenimHocam
 Eğitim | Rehber Matematik | @RehberMatematik
@@ -95,7 +96,6 @@ Eğitim | Hocalara Geldik | @HocalaraGeldik
 Eğitim | Khan Academy Türkçe | @KhanAcademyTurkce
 Komedi ve Skeç | Seksendört | UC1v30God7k3oSpGnLZbAn5Q
 Komedi ve Skeç | Bora Kontaş | UCqjp1xj3gTox-T4V_JlMvTQ
-Komedi ve Skeç | Doğu Demirkol | @dogudemirkol
-Komedi ve Skeç | Cem Yılmaz | @cemyilmaz
-Komedi ve Skeç | Hasan Can Kaya | @hasancankaya
-Oyun | Pintipanda | @pintipanda
+Komedi ve Skeç | Doğu Demirkol |
+Komedi ve Skeç | Cem Yılmaz |
+Komedi ve Skeç | Hasan Can Kaya |
