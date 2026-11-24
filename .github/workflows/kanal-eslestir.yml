@@ -24,47 +24,46 @@ jobs:
           node -e '
           const key = process.env.YOUTUBE_API_KEY;
           const liste = [
-            ["Gündem ve Haber","Cüneyt Özdemir"],["Gündem ve Haber","Fatih Altaylı"],["Gündem ve Haber","Nevşin Mengü"],
-            ["Gündem ve Haber","Medyascope"],["Gündem ve Haber","BBC News Türkçe"],["Gündem ve Haber","DW Türkçe"],
-            ["Gündem ve Haber","Sözcü TV"],["Gündem ve Haber","Halk TV"],["Gündem ve Haber","Tele1"],
-            ["Gündem ve Haber","TRT Haber"],["Gündem ve Haber","CNN TÜRK"],["Gündem ve Haber","NTV"],
-            ["Gündem ve Haber","Habertürk"],["Gündem ve Haber","A Haber"],
-            ["Bilgi ve Belgesel","Ruhi Çenet","@ruhicenet"],["Bilgi ve Belgesel","Barış Özcan"],["Bilgi ve Belgesel","Evrim Ağacı"],
-            ["Bilgi ve Belgesel","Anlatan Adam"],["Bilgi ve Belgesel","TRT Belgesel"],["Bilgi ve Belgesel","Ekşi Şeyler","@eksiseyler"],
-            ["Spor","Vole"],["Spor","beIN SPORTS Türkiye"],["Spor","TRT Spor"],["Spor","Socrates Dergi"],
-            ["Spor","Rabona Digital"],["Spor","Galatasaray"],["Spor","Fenerbahçe SK"],["Spor","Beşiktaş JK"],["Spor","Trabzonspor","@trabzonspor"],
-            ["Eğlence ve Tepki","Orkun Işıtmak"],["Eğlence ve Tepki","Tepkikolik"],["Eğlence ve Tepki","Noluyo Ya"],
-            ["Eğlence ve Tepki","Hayrettin"],["Eğlence ve Tepki","Enes Batur"],["Eğlence ve Tepki","Reynmen","@reynmen"],
-            ["Eğlence ve Tepki","Hayalhanem"],["Eğlence ve Tepki","Danla Bilic"],["Eğlence ve Tepki","Onedio"],
-            ["Sohbet ve Podcast","Kafa TV"],["Sohbet ve Podcast","Mantra"],["Sohbet ve Podcast","Babala TV"],
-            ["Sohbet ve Podcast","Az Önce Konuştum"],["Sohbet ve Podcast","Fularsız Entellik"],["Sohbet ve Podcast","Saba Tümer"],
-            ["Aile ve Vlog","Atik Ailesi"],["Aile ve Vlog","Duygu Özaslan"],["Aile ve Vlog","Merve Özkaynak"]
+            ["Gündem ve Haber","Cüneyt Özdemir","@cuneytozdemir"],["Gündem ve Haber","Fatih Altaylı","@fatihaltayli"],
+            ["Gündem ve Haber","Nevşin Mengü","@nevsinmengutv"],["Gündem ve Haber","Medyascope","@medyascope_tv"],
+            ["Gündem ve Haber","BBC News Türkçe","@bbcnewsturkce"],["Gündem ve Haber","DW Türkçe","@dwturkce"],
+            ["Gündem ve Haber","Sözcü TV","@sozcutelevizyonu"],["Gündem ve Haber","Halk TV","@halktv-eu"],
+            ["Gündem ve Haber","Tele1","@tele1comtr"],["Gündem ve Haber","TRT Haber","@trthaber"],
+            ["Gündem ve Haber","CNN TÜRK","@cnnturk"],["Gündem ve Haber","NTV","@ntv"],
+            ["Gündem ve Haber","Habertürk","@haberturktv"],["Gündem ve Haber","A Haber","@ahaber"],
+            ["Bilgi ve Belgesel","Ruhi Çenet","@ruhicenetdocs"],["Bilgi ve Belgesel","Barış Özcan","@barisozcan"],
+            ["Bilgi ve Belgesel","Evrim Ağacı","@evrimagaci"],["Bilgi ve Belgesel","Anlatan Adamlar","@AnlatanAdamlar"],
+            ["Bilgi ve Belgesel","TRT Belgesel","@trtbelgesel"],
+            ["Spor","Vole","@voleapp"],["Spor","beIN SPORTS Türkiye","@beinsportsturkiye"],["Spor","TRT Spor","@trtspor"],
+            ["Spor","Socrates Dergi","@socratesdergi"],["Spor","Rabona Digital","@rabonadigital"],["Spor","Galatasaray","@galatasaray"],
+            ["Spor","Fenerbahçe SK","@fenerbahce"],["Spor","Beşiktaş JK","@besiktas"],["Spor","Trabzonspor","@trabzonspor"],
+            ["Eğlence ve Tepki","Orkun Işıtmak","@orkunisitmak"],["Eğlence ve Tepki","Tepkikolik","@tepkikolik"],
+            ["Eğlence ve Tepki","Noluyo Ya","@noluyoyaa"],["Eğlence ve Tepki","Hayrettin","@hayrettin"],
+            ["Eğlence ve Tepki","Enes Batur","@newdaynewgame"],["Eğlence ve Tepki","Hayalhanem","@hayalhanem"],
+            ["Eğlence ve Tepki","Danla Bilic","@danlabilic"],["Eğlence ve Tepki","Onedio","@onediotube"],
+            ["Sohbet ve Podcast","Kafa TV","@kafa"],["Sohbet ve Podcast","Mantra","@mantrast"],
+            ["Sohbet ve Podcast","Babala TV","@babalatv"],["Sohbet ve Podcast","Az Önce Konuştum","@candastolgaileazoncekonustum"],
+            ["Sohbet ve Podcast","Fularsız Entellik","@fularszentellik"],["Sohbet ve Podcast","Saba Tümer","@sabatumer"],
+            ["Aile ve Vlog","Atik Ailesi","@atikailesi"],["Aile ve Vlog","Duygu Özaslan","@duyguozaslan"],
+            ["Aile ve Vlog","Merve Özkaynak","@merveozkaynak"]
           ];
           (async () => {
             const sonuc = [];
-            for (const [kategori, ad, tutamakVer] of liste) {
-              let id = null, bulunan = null;
-              if (tutamakVer) {
-                const j = await (await fetch("https://www.googleapis.com/youtube/v3/channels?part=snippet&forHandle=" + encodeURIComponent(tutamakVer) + "&key=" + key)).json();
-                if (j.error) { console.error(ad + ": " + j.error.message); process.exit(1); }
-                const k = j.items && j.items[0];
-                if (k) { id = k.id; bulunan = k.snippet.title; }
-              } else {
-                const u = "https://www.googleapis.com/youtube/v3/search?part=snippet&type=channel&maxResults=1&regionCode=TR&relevanceLanguage=tr&q=" + encodeURIComponent(ad) + "&key=" + key;
-                const j = await (await fetch(u)).json();
-                if (j.error) { console.error(ad + ": " + j.error.message); process.exit(1); }
-                const k = j.items && j.items[0];
-                if (k) { id = k.snippet.channelId; bulunan = k.snippet.channelTitle; }
-              }
-              sonuc.push({ kategori, ad, id, bulunan });
+            for (const [kategori, ad, tutamak] of liste) {
+              const j = await (await fetch("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&forHandle=" + encodeURIComponent(tutamak) + "&key=" + key)).json();
+              if (j.error) { console.error(ad + ": " + j.error.message); process.exit(1); }
+              const k = j.items && j.items[0];
+              sonuc.push({
+                kategori, ad, tutamak,
+                id: k ? k.id : null,
+                bulunan: k ? k.snippet.title : null,
+                abone: k ? Number(k.statistics.subscriberCount || 0) : 0
+              });
             }
-            const idler = sonuc.filter(s => s.id).map(s => s.id);
-            const c = await (await fetch("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=" + idler.join(",") + "&key=" + key)).json();
-            const bilgi = {};
-            (c.items || []).forEach(x => { bilgi[x.id] = { tutamak: x.snippet.customUrl || "", abone: Number(x.statistics.subscriberCount || 0) }; });
-            sonuc.forEach(s => Object.assign(s, bilgi[s.id] || {}));
             require("fs").writeFileSync("data/kanallar.json", JSON.stringify(sonuc, null, 2));
-            console.log(sonuc.map(s => s.ad + "  ->  " + s.bulunan + "  " + (s.tutamak || "") + "  (" + (s.abone || 0) + " abone)").join("\n"));
+            console.log(sonuc.map(s => (s.id ? "OK   " : "YOK  ") + s.ad + "  ->  " + s.bulunan + "  " + s.tutamak + "  (" + s.abone + " abone)").join("\n"));
+            const eksik = sonuc.filter(s => !s.id).length;
+            console.log("\nToplam: " + sonuc.length + " kanal, bulunamayan: " + eksik);
           })();
           '
 
