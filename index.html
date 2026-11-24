@@ -76,6 +76,7 @@ const KONU_SIMGE = { "Gündem": "📰", "Dünya": "🌍", "Ekonomi": "💰", "Sp
 const GUNLER = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
 const BES_DK = 5 * 60 * 1000;
 let trend = [], akis = [], haberler = [], sekme = "trend", secilenKategori = KATEGORILER[0], secilenKonu = "Tümü";
+  let aranan = "", arananHam = "", guncellemeZamani = null, sonYukleme = 0;
   function oku(ad, varsayilan) {
   try { const d = localStorage.getItem(ad); return d === null ? varsayilan : JSON.parse(d); } catch (e) { return varsayilan; }
 }
@@ -321,4 +322,3 @@ document.addEventListener("visibilitychange", () => {
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3b8c8a5f8bcd4468981be23af8283012"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
-let aranan = "", arananHam = "", guncellemeZamani = null, sonYukleme = 0;
