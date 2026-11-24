@@ -76,8 +76,9 @@ const KONU_SIMGE = { "Gündem": "📰", "Dünya": "🌍", "Ekonomi": "💰", "Sp
 const GUNLER = ["Paz", "Pzt", "Sal", "Çar", "Per", "Cum", "Cmt"];
 const BES_DK = 5 * 60 * 1000;
 let trend = [], akis = [], haberler = [], sekme = "trend", secilenKategori = KATEGORILER[0], secilenKonu = "Tümü";
-  let aranan = "", arananHam = "", guncellemeZamani = null, sonYukleme = 0;
-  function oku(ad, varsayilan) {
+let aranan = "", arananHam = "", guncellemeZamani = null, sonYukleme = 0;
+
+function oku(ad, varsayilan) {
   try { const d = localStorage.getItem(ad); return d === null ? varsayilan : JSON.parse(d); } catch (e) { return varsayilan; }
 }
 function kaydet(ad, deger) {
@@ -153,7 +154,8 @@ function kart(v, siraGoster) {
   kutu.append(a, yildiz);
   return kutu;
 }
-  function haberKart(h) {
+
+function haberKart(h) {
   const kutu = yap("div", "kart haber");
   const a = yap("a");
   a.href = h.link;
@@ -263,7 +265,8 @@ function goster() {
   }
   videolar.forEach(v => liste.append(kart(v, sekme === "trend")));
 }
-  function ustBilgiGuncelle() {
+
+function ustBilgiGuncelle() {
   if (guncellemeZamani) document.getElementById("guncelleme").textContent = "Son güncelleme: " + neZaman(guncellemeZamani);
   const canli = akis.filter(v => v.durum === "live").length;
   document.getElementById("canliButon").textContent = "🔴 Canlı" + (canli ? " (" + canli + ")" : "");
