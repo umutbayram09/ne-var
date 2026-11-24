@@ -2,6 +2,9 @@ name: Kanal eslestir
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - kanal-listesi.txt
 
 permissions:
   contents: write
@@ -23,48 +26,42 @@ jobs:
           mkdir -p data
           node -e '
           const key = process.env.YOUTUBE_API_KEY;
-          const liste = [
-            ["Gündem ve Haber","Cüneyt Özdemir","@cuneytozdemir"],["Gündem ve Haber","Fatih Altaylı","@fatihaltayli"],
-            ["Gündem ve Haber","Nevşin Mengü","@nevsinmengutv"],["Gündem ve Haber","Medyascope","@medyascope_tv"],
-            ["Gündem ve Haber","BBC News Türkçe","@bbcnewsturkce"],["Gündem ve Haber","DW Türkçe","@dwturkce"],
-            ["Gündem ve Haber","Sözcü TV","@sozcutelevizyonu"],["Gündem ve Haber","Halk TV","@halktv-eu"],
-            ["Gündem ve Haber","Tele1","@tele1comtr"],["Gündem ve Haber","TRT Haber","@trthaber"],
-            ["Gündem ve Haber","CNN TÜRK","@cnnturk"],["Gündem ve Haber","NTV","@ntv"],
-            ["Gündem ve Haber","Habertürk","@haberturktv"],["Gündem ve Haber","A Haber","@ahaber"],
-            ["Bilgi ve Belgesel","Ruhi Çenet","@ruhicenetdocs"],["Bilgi ve Belgesel","Barış Özcan","@barisozcan"],
-            ["Bilgi ve Belgesel","Evrim Ağacı","@evrimagaci"],["Bilgi ve Belgesel","Anlatan Adamlar","@AnlatanAdamlar"],
-            ["Bilgi ve Belgesel","TRT Belgesel","@trtbelgesel"],
-            ["Spor","Vole","@voleapp"],["Spor","beIN SPORTS Türkiye","@beinsportsturkiye"],["Spor","TRT Spor","@trtspor"],
-            ["Spor","Socrates Dergi","@socratesdergi"],["Spor","Rabona Digital","@rabonadigital"],["Spor","Galatasaray","@galatasaray"],
-            ["Spor","Fenerbahçe SK","@fenerbahce"],["Spor","Beşiktaş JK","@besiktas"],["Spor","Trabzonspor","@trabzonspor"],
-            ["Eğlence ve Tepki","Orkun Işıtmak","@orkunisitmak"],["Eğlence ve Tepki","Tepkikolik","@tepkikolik"],
-            ["Eğlence ve Tepki","Noluyo Ya","@noluyoyaa"],["Eğlence ve Tepki","Hayrettin","@hayrettin"],
-            ["Eğlence ve Tepki","Enes Batur","@newdaynewgame"],["Eğlence ve Tepki","Hayalhanem","@hayalhanem"],
-            ["Eğlence ve Tepki","Danla Bilic","@danlabilic"],["Eğlence ve Tepki","Onedio","@onediotube"],
-            ["Sohbet ve Podcast","Kafa TV","@kafa"],["Sohbet ve Podcast","Mantra","@mantrast"],
-            ["Sohbet ve Podcast","Babala TV","@babalatv"],["Sohbet ve Podcast","Az Önce Konuştum","@candastolgaileazoncekonustum"],
-            ["Sohbet ve Podcast","Fularsız Entellik","@fularszentellik"],["Sohbet ve Podcast","Saba Tümer","@sabatumer"],
-            ["Aile ve Vlog","Atik Ailesi","@atikailesi"],["Aile ve Vlog","Duygu Özaslan","@duyguozaslan"],
-            ["Aile ve Vlog","Merve Özkaynak","@merveozkaynak"]
-          ];
+          const fs = require("fs");
+          const api = async (yol) => {
+            const j = await (await fetch("https://www.googleapis.com/youtube/v3/" + yol + "&key=" + key)).json();
+            if (j.error) throw new Error(j.error.message);
+            return j;
+          };
+          const satirlar = fs.readFileSync("kanal-listesi.txt", "utf8").split("\n").map(s => s.trim()).filter(s => s && !s.startsWith("#"));
           (async () => {
             const sonuc = [];
-            for (const [kategori, ad, tutamak] of liste) {
-              const j = await (await fetch("https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&forHandle=" + encodeURIComponent(tutamak) + "&key=" + key)).json();
-              if (j.error) { console.error(ad + ": " + j.error.message); process.exit(1); }
-              const k = j.items && j.items[0];
-              sonuc.push({
-                kategori, ad, tutamak,
-                id: k ? k.id : null,
-                bulunan: k ? k.snippet.title : null,
-                abone: k ? Number(k.statistics.subscriberCount || 0) : 0
-              });
+            for (const satir of satirlar) {
+              const [kategori, ad, kimlikHam] = satir.split("|").map(x => (x || "").trim());
+              const kimlik = kimlikHam || "";
+              let id = null, bulunan = null, abone = 0, yontem = "";
+              if (kimlik) {
+                const yol = kimlik.startsWith("UC") ? "id=" + kimlik : "forHandle=" + encodeURIComponent(kimlik.startsWith("@") ? kimlik : "@" + kimlik);
+                const j = await api("channels?part=snippet,statistics&" + yol);
+                const k = j.items && j.items[0];
+                if (k) { id = k.id; bulunan = k.snippet.title; abone = Number(k.statistics.subscriberCount || 0); }
+                yontem = "kimlik";
+              } else {
+                const j = await api("search?part=snippet&type=channel&maxResults=1&regionCode=TR&relevanceLanguage=tr&q=" + encodeURIComponent(ad));
+                const k = j.items && j.items[0];
+                if (k) { id = k.snippet.channelId; bulunan = k.snippet.channelTitle; }
+                yontem = "arama";
+              }
+              sonuc.push({ kategori, ad, kimlik, id, bulunan, abone, yontem });
             }
-            require("fs").writeFileSync("data/kanallar.json", JSON.stringify(sonuc, null, 2));
-            console.log(sonuc.map(s => (s.id ? "OK   " : "YOK  ") + s.ad + "  ->  " + s.bulunan + "  " + s.tutamak + "  (" + s.abone + " abone)").join("\n"));
-            const eksik = sonuc.filter(s => !s.id).length;
-            console.log("\nToplam: " + sonuc.length + " kanal, bulunamayan: " + eksik);
-          })();
+            fs.writeFileSync("data/kanallar.json", JSON.stringify(sonuc, null, 2));
+            sonuc.forEach(s => console.log((s.id ? (s.yontem === "arama" ? "KONTROL ET  " : "OK          ") : "YOK         ") + s.ad + "  ->  " + (s.bulunan || "-") + "  (" + s.abone + " abone)"));
+            const yok = sonuc.filter(s => !s.id);
+            const kontrol = sonuc.filter(s => s.id && s.yontem === "arama");
+            console.log("");
+            console.log("Toplam: " + sonuc.length + " kanal | bulunamayan: " + yok.length + " | aramayla bulunan (kontrol et): " + kontrol.length);
+            if (yok.length) console.log("Bulunamayanlar: " + yok.map(s => s.ad).join(", "));
+            if (kontrol.length) console.log("Kontrol edilecekler: " + kontrol.map(s => s.ad + " -> " + s.bulunan).join(", "));
+          })().catch(e => { console.error(e.message); process.exit(1); });
           '
 
       - name: Kaydet
