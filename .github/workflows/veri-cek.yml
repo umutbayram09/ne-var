@@ -25,7 +25,8 @@ jobs:
           mkdir -p data
           node -e '
           const key = process.env.YOUTUBE_API_KEY;
-          const url = "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&chart=mostPopular&regionCode=TR&maxResults=50&key=" + key;
+          const sn = d => { const m = (d || "").match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/); return m ? (+(m[1] || 0)) * 3600 + (+(m[2] || 0)) * 60 + (+(m[3] || 0)) : 0; };
+          const url = "https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics,contentDetails&chart=mostPopular&regionCode=TR&maxResults=50&key=" + key;
           fetch(url).then(r => r.json()).then(j => {
             if (j.error) { console.error(j.error.message); process.exit(1); }
             const videolar = j.items.map(v => ({
@@ -36,6 +37,7 @@ jobs:
               tarih: v.snippet.publishedAt,
               resim: (v.snippet.thumbnails.medium || v.snippet.thumbnails.default).url,
               izlenme: Number(v.statistics?.viewCount || 0),
+              sure: sn(v.contentDetails?.duration),
               canli: v.snippet.liveBroadcastContent === "live"
             }));
             require("fs").writeFileSync("data/trend.json", JSON.stringify({ guncelleme: new Date().toISOString(), videolar }, null, 2));
@@ -50,6 +52,7 @@ jobs:
           node -e '
           const key = process.env.YOUTUBE_API_KEY;
           const fs = require("fs");
+          const sn = d => { const m = (d || "").match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/); return m ? (+(m[1] || 0)) * 3600 + (+(m[2] || 0)) * 60 + (+(m[3] || 0)) : 0; };
           const kanallar = JSON.parse(fs.readFileSync("data/kanallar.json", "utf8")).filter(k => k.id);
           const api = async (yol) => {
             const j = await (await fetch("https://www.googleapis.com/youtube/v3/" + yol + "&key=" + key)).json();
@@ -68,7 +71,7 @@ jobs:
             }
             const videolar = [];
             for (let i = 0; i < idler.length; i += 50) {
-              const j = await api("videos?part=snippet,statistics,liveStreamingDetails&id=" + idler.slice(i, i + 50).join(","));
+              const j = await api("videos?part=snippet,statistics,liveStreamingDetails,contentDetails&id=" + idler.slice(i, i + 50).join(","));
               j.items.forEach(v => videolar.push({
                 id: v.id,
                 baslik: v.snippet.title,
@@ -79,12 +82,14 @@ jobs:
                 resim: (v.snippet.thumbnails.medium || v.snippet.thumbnails.default).url,
                 izlenme: Number(v.statistics?.viewCount || 0),
                 izleyen: Number(v.liveStreamingDetails?.concurrentViewers || 0),
+                planlanan: v.liveStreamingDetails?.scheduledStartTime || null,
+                sure: sn(v.contentDetails?.duration),
                 durum: v.snippet.liveBroadcastContent
               }));
             }
             videolar.sort((a, b) => new Date(b.tarih) - new Date(a.tarih));
             fs.writeFileSync("data/akis.json", JSON.stringify({ guncelleme: new Date().toISOString(), videolar }, null, 2));
-            console.log(videolar.length + " kanal videosu, " + videolar.filter(v => v.durum === "live").length + " canli yayin");
+            console.log(videolar.length + " kanal videosu, " + videolar.filter(v => v.durum === "live").length + " canli, " + videolar.filter(v => v.durum === "upcoming").length + " planli yayin");
           })().catch(e => { console.error(e.message); process.exit(1); });
           '
 
