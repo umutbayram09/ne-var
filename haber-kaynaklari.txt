@@ -1,0 +1,22 @@
+Anadolu Ajansı | Gündem | https://www.aa.com.tr/tr/rss/default?cat=guncel
+TRT Haber | Gündem | https://www.trthaber.com/sondakika_articles.rss
+Sabah | Gündem | https://www.sabah.com.tr/rss/anasayfa.xml
+NTV | Gündem | https://www.ntv.com.tr/gundem.rss
+Hürriyet | Gündem | https://www.hurriyet.com.tr/rss/anasayfa
+Habertürk | Gündem | https://www.haberturk.com/rss
+Sözcü | Gündem | https://www.sozcu.com.tr/feeds-haberler
+Cumhuriyet | Gündem | https://www.cumhuriyet.com.tr/rss/son_dakika.xml
+T24 | Gündem | https://t24.com.tr/rss
+BBC Türkçe | Dünya | https://feeds.bbci.co.uk/turkce/rss.xml
+DW Türkçe | Dünya | https://rss.dw.com/rdf/rss-tur-all
+Bloomberg HT | Ekonomi | https://www.bloomberght.com/rss
+NTV Spor | Spor | https://www.ntvspor.net/rss
+Webtekno | Teknoloji | https://www.webtekno.com/rss.xml
+ShiftDelete.Net | Teknoloji | https://shiftdelete.net/feed
+Webrazzi | Teknoloji | https://webrazzi.com/feed
+Merlin'in Kazanı | Oyun | https://www.merlininkazani.com/rss
+Oyungezer | Oyun | https://oyungezer.com.tr/feed
+Turuncu Levye | Oyun | https://www.turunculevye.com/feed
+Onedio | Magazin | https://onedio.com/rss
+Hürriyet Kelebek | Magazin | https://www.hurriyet.com.tr/rss/kelebek
+Beyazperde | Sinema ve Dizi | https://www.beyazperde.com/rss/haberler.xml
