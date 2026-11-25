@@ -1,5 +1,5 @@
 {
-  "guncelleme": "2026-11-25T06:00:40.292Z",
+  "guncelleme": "2026-11-25T07:21:26.605Z",
   "haberler": [
     {
       "baslik": "YouTube'un eski TV simgesi geri dönebilir",
@@ -12,24 +12,14 @@
       "eslesen": "youtube"
     },
     {
-      "baslik": "Büşra Deveci: Fransız diyorlardı Gürcü çıktım",
+      "baslik": "Büşra Develi: Fransız diyorlardı Gürcü çıktım",
       "link": "https://www.hurriyet.com.tr/kelebek/televizyon/busra-deveci-fransiz-diyorlardi-gurcu-ciktim-43388717",
-      "kaynak": "Hürriyet",
-      "konu": "Gündem",
-      "tarih": "2026-11-24T06:23:28.000Z",
+      "kaynak": "Hürriyet Kelebek",
+      "konu": "Magazin",
+      "tarih": "2026-11-24T06:23:00.000Z",
       "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b052d5e3516f14679ccc581.jpg",
       "ozet": "OYUNCU Büşra Develi, YouTube’da yayınlanan ‘Fatih Altaylı ile Pazar Sohbeti’ programına konuk oldu.",
       "eslesen": "youtube"
-    },
-    {
-      "baslik": "En İyi Youtuber Mikrofonu Markaları - 2026",
-      "link": "https://www.webtekno.com/en-iyi-youtuber-mikrofonu-markalari-h229333.html",
-      "kaynak": "Webtekno",
-      "konu": "Teknoloji",
-      "tarih": "2026-11-23T13:39:13.000Z",
-      "resim": "https://imgrosetta.webtekno.com/file/698317/698317-640xauto.jpg",
-      "ozet": "En iyi YouTuber mikrofonu markaları hangileri? 2026 güncel fiyatlarıyla Rode, Shure, Audio-Technica, HyperX ve Elgato modellerini inceledik.",
-      "eslesen": "youtuber"
     },
     {
       "baslik": "Muhteşem kadınlardan muhteşem hikayeler",
@@ -80,8 +70,8 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 71,
-      "adet": 1
+      "okunan": 66,
+      "adet": 0
     },
     {
       "kaynak": "Habertürk",
@@ -143,9 +133,9 @@
       "kaynak": "Webtekno",
       "konu": "Teknoloji",
       "url": "https://www.webtekno.com/rss.xml",
-      "durum": "OK",
-      "okunan": 42,
-      "adet": 1
+      "durum": "HATA",
+      "adet": 0,
+      "hata": "The operation was aborted due to timeout"
     },
     {
       "kaynak": "ShiftDelete.Net",
