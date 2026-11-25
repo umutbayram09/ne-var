@@ -1,5 +1,5 @@
 {
-  "guncelleme": "2026-11-25T08:50:26.298Z",
+  "guncelleme": "2026-11-25T10:13:14.249Z",
   "haberler": [
     {
       "baslik": "Seda Sayan: Ex’ten next olmaz",
@@ -40,16 +40,6 @@
       "resim": "https://imgrosetta.webtekno.com/file/698317/698317-640xauto.jpg",
       "ozet": "En iyi YouTuber mikrofonu markaları hangileri? 2026 güncel fiyatlarıyla Rode, Shure, Audio-Technica, HyperX ve Elgato modellerini inceledik.",
       "eslesen": "youtuber"
-    },
-    {
-      "baslik": "Muhteşem kadınlardan muhteşem hikayeler",
-      "link": "https://www.hurriyet.com.tr/kelebek/televizyon/muhtesem-kadinlardan-muhtesem-hikayeler-43387529",
-      "kaynak": "Hürriyet Kelebek",
-      "konu": "Magazin",
-      "tarih": "2026-11-23T06:07:00.000Z",
-      "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b03d7f02356f0a3a15a3d5e.jpg",
-      "ozet": "‘Muhteşem Yüzyıl’ın oyuncuları Selma Ergeç, Selen Öztürk, Pelin Karahan ve Nur Fettahoğlu, aynı dizide rol aldıkları Dolunay Soysert’in Kafa TV’deki programında bir araya geldi. Aradan geçen 12 yılın ardından diziyi konu",
-      "eslesen": "kafa tv"
     }
   ],
   "kaynaklar": [
@@ -90,7 +80,7 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 70,
+      "okunan": 68,
       "adet": 0
     },
     {
@@ -122,7 +112,7 @@
       "konu": "Dünya",
       "url": "https://feeds.bbci.co.uk/turkce/rss.xml",
       "durum": "OK",
-      "okunan": 17,
+      "okunan": 16,
       "adet": 0
     },
     {
@@ -154,7 +144,7 @@
       "konu": "Teknoloji",
       "url": "https://www.webtekno.com/rss.xml",
       "durum": "OK",
-      "okunan": 47,
+      "okunan": 50,
       "adet": 1
     },
     {
@@ -187,7 +177,7 @@
       "url": "https://www.hurriyet.com.tr/rss/kelebek",
       "durum": "OK",
       "okunan": 100,
-      "adet": 3
+      "adet": 2
     },
     {
       "kaynak": "Beyazperde",
