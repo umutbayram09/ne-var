@@ -1,6 +1,61 @@
 {
-  "guncelleme": "2026-11-25T12:57:52.420Z",
+  "guncelleme": "2026-11-25T14:12:48.882Z",
   "olaylar": [
+    {
+      "id": "canli-x8KVbZY08DE",
+      "tur": "canli",
+      "metin": "Habertürk TV canlı yayına başladı: “#CANLI - Habertürk Manşet başladı”",
+      "tarih": "2026-11-25T14:12:48.882Z",
+      "videoId": "x8KVbZY08DE",
+      "baslik": "#CANLI - Habertürk Manşet başladı",
+      "kanal": "Habertürk TV",
+      "kanalId": "UCn6dNfiRE_Xunu7iMyvD7AA",
+      "resim": "https://i.ytimg.com/vi/x8KVbZY08DE/mqdefault.jpg?v=3"
+    },
+    {
+      "id": "canli-TGUd7OkMNb4",
+      "tur": "canli",
+      "metin": "Medyascope TV canlı yayına başladı: “Süreç ve İmralı hakkında doğrular ve yanlışlar | Ayşegül Doğan ilk kez anlatıyor”",
+      "tarih": "2026-11-25T14:12:48.882Z",
+      "videoId": "TGUd7OkMNb4",
+      "baslik": "Süreç ve İmralı hakkında doğrular ve yanlışlar | Ayşegül Doğan ilk kez anlatıyor",
+      "kanal": "Medyascope TV",
+      "kanalId": "UCNCVuaQDvPrZ4oTKG90iqOA",
+      "resim": "https://i.ytimg.com/vi/TGUd7OkMNb4/mqdefault.jpg"
+    },
+    {
+      "id": "canli-6H9EZJ1B4KA",
+      "tur": "canli",
+      "metin": "Medyascope TV canlı yayına başladı: “YENİ Parti'nin gidişatı | Uzman konuklar değerlendiriyor #CANLI”",
+      "tarih": "2026-11-25T14:12:48.882Z",
+      "videoId": "6H9EZJ1B4KA",
+      "baslik": "YENİ Parti'nin gidişatı | Uzman konuklar değerlendiriyor #CANLI",
+      "kanal": "Medyascope TV",
+      "kanalId": "UCNCVuaQDvPrZ4oTKG90iqOA",
+      "resim": "https://i.ytimg.com/vi/6H9EZJ1B4KA/mqdefault.jpg?v=6b0695a6"
+    },
+    {
+      "id": "esik-500000-9fpC7PC7uy0",
+      "tur": "esik",
+      "metin": "TRT SPOR kanalının “Şampiyonlar Ligi 5. Hafta | Arsenal - Borussia Dortmund (Özet)” videosu 16 saatte 500 bin izlenmeyi geçti.",
+      "tarih": "2026-11-25T14:12:48.882Z",
+      "videoId": "9fpC7PC7uy0",
+      "baslik": "Şampiyonlar Ligi 5. Hafta | Arsenal - Borussia Dortmund (Özet)",
+      "kanal": "TRT SPOR",
+      "kanalId": "UCfYNqluOf8EbQkL44otydMw",
+      "resim": "https://i.ytimg.com/vi/9fpC7PC7uy0/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-A30cBa0acNc",
+      "tur": "esik",
+      "metin": "Gürol Çalışkan kanalının “KORKUNÇ JERRY KÖPEĞİNDEN KURTULMAK İÇİN GÖKYÜZÜNE SIĞINAK YAPTIK - Minecraft” videosu 23 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-25T14:12:48.882Z",
+      "videoId": "A30cBa0acNc",
+      "baslik": "KORKUNÇ JERRY KÖPEĞİNDEN KURTULMAK İÇİN GÖKYÜZÜNE SIĞINAK YAPTIK - Minecraft",
+      "kanal": "Gürol Çalışkan",
+      "kanalId": "UCo6xy_aqhmO2A4oZZs7vt7g",
+      "resim": "https://i.ytimg.com/vi/A30cBa0acNc/mqdefault.jpg"
+    },
     {
       "id": "canli-EXezRQbvRCk",
       "tur": "canli",
