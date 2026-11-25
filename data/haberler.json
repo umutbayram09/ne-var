@@ -1,6 +1,16 @@
 {
-  "guncelleme": "2026-11-25T12:38:14.966Z",
+  "guncelleme": "2026-11-25T13:55:35.028Z",
   "haberler": [
+    {
+      "baslik": "Malezya, Google'a zararlı içeriklere karşı yeterli önlem almadığı gerekçesiyle dava açtı",
+      "link": "https://www.trthaber.com/haber/dunya/malezya-googlea-zararli-iceriklere-karsi-yeterli-onlem-almadigi-gerekcesiyle-dava-acti-964447.html",
+      "kaynak": "TRT Haber",
+      "konu": "Gündem",
+      "tarih": "2026-11-25T13:16:00.000Z",
+      "resim": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2076000/google-reu-2076406.jpg",
+      "ozet": "Malezya, ABD'li teknoloji şirketi Google'a sahip olduğu YouTube platformundaki \"zararlı içeriklere karşı yeterli önlem almadığı\" gerekçesiyle yaklaşık 145,8 milyon dolarlık 2 ayrı dava açıldığını bildirdi.",
+      "eslesen": "youtube"
+    },
     {
       "baslik": "YouTube, İstediğiniz Zaman Değiştirebileceğiniz Yeni Uygulama İkonları Üzerinde Çalışıyor: İşte Tasarımlar!",
       "link": "https://www.webtekno.com/youtube-yeni-uygulama-ikonlari-tasarimlari-h229435.html",
@@ -12,16 +22,6 @@
       "eslesen": "youtube"
     },
     {
-      "baslik": "Malezya, Google'a YouTube'daki \"zararlı içeriklere karşı yeterli önlem almadığı\" gerekçesiyle dava açtı",
-      "link": "https://www.aa.com.tr/tr/bilim-teknoloji/malezya-googlea-youtubedaki-zararli-iceriklere-karsi-yeterli-onlem-almadigi-gerekcesiyle-dava-acti/4137099",
-      "kaynak": "Anadolu Ajansı",
-      "konu": "Gündem",
-      "tarih": "2026-11-25T10:40:58.000Z",
-      "resim": "https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/25/thumbs_b_c_9913d8f5bb4f5078d33ab06da19f5b75.jpg",
-      "ozet": "Malezya, ABD'li teknoloji şirketi Google'a, sahip olduğu YouTube platformundaki \"zararlı içeriklere karşı yeterli önlem almadığı\" gerekçesiyle yaklaşık 145,8 milyon dolarlık 2 ayrı dava açtığını bildirdi.",
-      "eslesen": "youtube"
-    },
-    {
       "baslik": "Seda Sayan: Ex’ten next olmaz",
       "link": "https://www.hurriyet.com.tr/kelebek/televizyon/seda-sayan-exten-next-olmaz-43390280",
       "kaynak": "Hürriyet Kelebek",
@@ -30,16 +30,6 @@
       "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b068e289a30875a04579f1e.jpg",
       "ozet": "SEDA Sayan, Kafa TV’de yayınlanan programında ilişkiler üzerine açıklamalarda bulundu.",
       "eslesen": "kafa tv"
-    },
-    {
-      "baslik": "YouTube'un eski TV simgesi geri dönebilir",
-      "link": "https://shiftdelete.net/youtube-ozel-uygulama-simgesi-eski-tv-ikonu",
-      "kaynak": "ShiftDelete.Net",
-      "konu": "Teknoloji",
-      "tarih": "2026-11-24T10:37:07.000Z",
-      "resim": "https://ares.shiftdelete.net/static/sdnweb-rehber/2026/11/youtube-abonelikler-yeni-tasarim-kapak.webp",
-      "ozet": "YouTube'un Android beta sürümünde, uygulama simgesini değiştirmeye yarayan yedi yeni tasarım bulundu. Aralarında iPhone'un ilk yıllarındaki eski televizyon simgesi de var.",
-      "eslesen": "youtube"
     },
     {
       "baslik": "Büşra Develi: Fransız diyorlardı Gürcü çıktım",
@@ -69,7 +59,7 @@
       "url": "https://www.aa.com.tr/tr/rss/default?cat=guncel",
       "durum": "OK",
       "okunan": 30,
-      "adet": 1
+      "adet": 0
     },
     {
       "kaynak": "TRT Haber",
@@ -77,7 +67,7 @@
       "url": "https://www.trthaber.com/sondakika_articles.rss",
       "durum": "OK",
       "okunan": 60,
-      "adet": 0
+      "adet": 1
     },
     {
       "kaynak": "Sabah",
@@ -100,7 +90,7 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 69,
+      "okunan": 68,
       "adet": 0
     },
     {
@@ -173,7 +163,7 @@
       "url": "https://shiftdelete.net/feed",
       "durum": "OK",
       "okunan": 50,
-      "adet": 1
+      "adet": 0
     },
     {
       "kaynak": "Webrazzi",
