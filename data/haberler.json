@@ -1,6 +1,16 @@
 {
-  "guncelleme": "2026-11-25T07:21:26.605Z",
+  "guncelleme": "2026-11-25T08:50:26.298Z",
   "haberler": [
+    {
+      "baslik": "Seda Sayan: Ex’ten next olmaz",
+      "link": "https://www.hurriyet.com.tr/kelebek/televizyon/seda-sayan-exten-next-olmaz-43390280",
+      "kaynak": "Hürriyet Kelebek",
+      "konu": "Magazin",
+      "tarih": "2026-11-25T07:29:55.000Z",
+      "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b068e289a30875a04579f1e.jpg",
+      "ozet": "SEDA Sayan, Kafa TV’de yayınlanan programında ilişkiler üzerine açıklamalarda bulundu.",
+      "eslesen": "kafa tv"
+    },
     {
       "baslik": "YouTube'un eski TV simgesi geri dönebilir",
       "link": "https://shiftdelete.net/youtube-ozel-uygulama-simgesi-eski-tv-ikonu",
@@ -20,6 +30,16 @@
       "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b052d5e3516f14679ccc581.jpg",
       "ozet": "OYUNCU Büşra Develi, YouTube’da yayınlanan ‘Fatih Altaylı ile Pazar Sohbeti’ programına konuk oldu.",
       "eslesen": "youtube"
+    },
+    {
+      "baslik": "En İyi Youtuber Mikrofonu Markaları - 2026",
+      "link": "https://www.webtekno.com/en-iyi-youtuber-mikrofonu-markalari-h229333.html",
+      "kaynak": "Webtekno",
+      "konu": "Teknoloji",
+      "tarih": "2026-11-23T13:39:13.000Z",
+      "resim": "https://imgrosetta.webtekno.com/file/698317/698317-640xauto.jpg",
+      "ozet": "En iyi YouTuber mikrofonu markaları hangileri? 2026 güncel fiyatlarıyla Rode, Shure, Audio-Technica, HyperX ve Elgato modellerini inceledik.",
+      "eslesen": "youtuber"
     },
     {
       "baslik": "Muhteşem kadınlardan muhteşem hikayeler",
@@ -70,7 +90,7 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 66,
+      "okunan": 70,
       "adet": 0
     },
     {
@@ -133,9 +153,9 @@
       "kaynak": "Webtekno",
       "konu": "Teknoloji",
       "url": "https://www.webtekno.com/rss.xml",
-      "durum": "HATA",
-      "adet": 0,
-      "hata": "The operation was aborted due to timeout"
+      "durum": "OK",
+      "okunan": 47,
+      "adet": 1
     },
     {
       "kaynak": "ShiftDelete.Net",
@@ -167,7 +187,7 @@
       "url": "https://www.hurriyet.com.tr/rss/kelebek",
       "durum": "OK",
       "okunan": 100,
-      "adet": 2
+      "adet": 3
     },
     {
       "kaynak": "Beyazperde",
