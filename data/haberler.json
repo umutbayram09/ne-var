@@ -1,5 +1,5 @@
 {
-  "guncelleme": "2026-11-25T03:38:21.254Z",
+  "guncelleme": "2026-11-25T04:42:55.531Z",
   "haberler": [
     {
       "baslik": "YouTube'un eski TV simgesi geri dönebilir",
@@ -40,16 +40,6 @@
       "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b03d7f02356f0a3a15a3d5e.jpg",
       "ozet": "‘Muhteşem Yüzyıl’ın oyuncuları Selma Ergeç, Selen Öztürk, Pelin Karahan ve Nur Fettahoğlu, aynı dizide rol aldıkları Dolunay Soysert’in Kafa TV’deki programında bir araya geldi. Aradan geçen 12 yılın ardından diziyi konu",
       "eslesen": "kafa tv"
-    },
-    {
-      "baslik": "Tears of the Kingdom Oyuncusunun Kısa Filmini Kaçırmayın",
-      "link": "https://www.merlininkazani.com/tears-of-the-kingdom-oyuncusunun-kisa-filmini-kacirmayin-haber-264510",
-      "kaynak": "Merlin'in Kazanı",
-      "konu": "Oyun",
-      "tarih": "2026-11-21T21:40:00.000Z",
-      "resim": "",
-      "ozet": "Japon içerik üreticisi Keke, The Legend of Zelda: Tears of the Kingdom içinde hazırladığı kısa filmi ile görenleri hayrete düşürdü. Övgüler yağmur gibi yağdı.",
-      "eslesen": "içerik üreticisi"
     }
   ],
   "kaynaklar": [
@@ -90,7 +80,7 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 75,
+      "okunan": 71,
       "adet": 1
     },
     {
@@ -179,7 +169,7 @@
       "url": "https://www.merlininkazani.com/rss",
       "durum": "OK",
       "okunan": 50,
-      "adet": 1
+      "adet": 0
     },
     {
       "kaynak": "Hürriyet Kelebek",
