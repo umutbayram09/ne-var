@@ -1,6 +1,16 @@
 {
-  "guncelleme": "2026-11-25T19:32:01.016Z",
+  "guncelleme": "2026-11-25T20:27:31.063Z",
   "haberler": [
+    {
+      "baslik": "YouTube çöktü mü? 25 Kasım Çarşamba YouTube neden açılmıyor?",
+      "link": "https://www.cumhuriyet.com.tr/yasam/youtube-coktu-mu-25-kasim-carsamba-youtube-neden-acilmiyor-2559469",
+      "kaynak": "Cumhuriyet",
+      "konu": "Gündem",
+      "tarih": "2026-11-25T19:36:00.000Z",
+      "resim": "https://media.cumhuriyet.com.tr/Archive/3aa6148b-db36-4299-9d66-f41f3204122c.jpg",
+      "ozet": "YouTube'a erişim sorunu yaşadığını belirten kullanıcılar, 25 Kasım 2026 Çarşamba günü “YouTube çöktü mü, neden açılmıyor?” sorularına yanıt arıyor. Video platformunda yaşanan erişim problemlerinin ardından gözler güncel ",
+      "eslesen": "youtube"
+    },
     {
       "baslik": "Malezya, Google'a zararlı içeriklere karşı yeterli önlem almadığı gerekçesiyle dava açtı",
       "link": "https://www.trthaber.com/haber/dunya/malezya-googlea-zararli-iceriklere-karsi-yeterli-onlem-almadigi-gerekcesiyle-dava-acti-964447.html",
@@ -105,7 +115,7 @@
       "url": "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
       "durum": "OK",
       "okunan": 100,
-      "adet": 0
+      "adet": 1
     },
     {
       "kaynak": "BBC Türkçe",
