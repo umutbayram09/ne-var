@@ -1,6 +1,26 @@
 {
-  "guncelleme": "2026-11-25T10:13:14.249Z",
+  "guncelleme": "2026-11-25T11:32:14.919Z",
   "haberler": [
+    {
+      "baslik": "YouTube, İstediğiniz Zaman Değiştirebileceğiniz Yeni Uygulama İkonları Üzerinde Çalışıyor: İşte Tasarımlar!",
+      "link": "https://www.webtekno.com/youtube-yeni-uygulama-ikonlari-tasarimlari-h229435.html",
+      "kaynak": "Webtekno",
+      "konu": "Teknoloji",
+      "tarih": "2026-11-25T11:14:45.000Z",
+      "resim": "https://imgrosetta.webtekno.com/file/698584/698584-640xauto.jpg",
+      "ozet": "YouTube, uygulama ikonunu değiştirmek isteyenler için yedi seçenek hazırlıyor.",
+      "eslesen": "youtube"
+    },
+    {
+      "baslik": "Malezya, Google'a YouTube'daki \"zararlı içeriklere karşı yeterli önlem almadığı\" gerekçesiyle dava açtı",
+      "link": "https://www.aa.com.tr/tr/bilim-teknoloji/malezya-googlea-youtubedaki-zararli-iceriklere-karsi-yeterli-onlem-almadigi-gerekcesiyle-dava-acti/4137099",
+      "kaynak": "Anadolu Ajansı",
+      "konu": "Gündem",
+      "tarih": "2026-11-25T10:40:58.000Z",
+      "resim": "https://cdnuploads.aa.com.tr/uploads/Contents/2026/11/25/thumbs_b_c_9913d8f5bb4f5078d33ab06da19f5b75.jpg",
+      "ozet": "Malezya, ABD'li teknoloji şirketi Google'a, sahip olduğu YouTube platformundaki \"zararlı içeriklere karşı yeterli önlem almadığı\" gerekçesiyle yaklaşık 145,8 milyon dolarlık 2 ayrı dava açtığını bildirdi.",
+      "eslesen": "youtube"
+    },
     {
       "baslik": "Seda Sayan: Ex’ten next olmaz",
       "link": "https://www.hurriyet.com.tr/kelebek/televizyon/seda-sayan-exten-next-olmaz-43390280",
@@ -49,7 +69,7 @@
       "url": "https://www.aa.com.tr/tr/rss/default?cat=guncel",
       "durum": "OK",
       "okunan": 30,
-      "adet": 0
+      "adet": 1
     },
     {
       "kaynak": "TRT Haber",
@@ -145,7 +165,7 @@
       "url": "https://www.webtekno.com/rss.xml",
       "durum": "OK",
       "okunan": 50,
-      "adet": 1
+      "adet": 2
     },
     {
       "kaynak": "ShiftDelete.Net",
