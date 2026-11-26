@@ -1,26 +1,6 @@
 {
-  "guncelleme": "2026-11-26T06:29:27.568Z",
+  "guncelleme": "2026-11-26T07:58:45.250Z",
   "haberler": [
-    {
-      "baslik": "YouTube çöktü mü? 25 Kasım Çarşamba YouTube neden açılmıyor?",
-      "link": "https://www.cumhuriyet.com.tr/yasam/youtube-coktu-mu-25-kasim-carsamba-youtube-neden-acilmiyor-2559469",
-      "kaynak": "Cumhuriyet",
-      "konu": "Gündem",
-      "tarih": "2026-11-25T19:36:00.000Z",
-      "resim": "https://media.cumhuriyet.com.tr/Archive/3aa6148b-db36-4299-9d66-f41f3204122c.jpg",
-      "ozet": "YouTube'a erişim sorunu yaşadığını belirten kullanıcılar, 25 Kasım 2026 Çarşamba günü “YouTube çöktü mü, neden açılmıyor?” sorularına yanıt arıyor. Video platformunda yaşanan erişim problemlerinin ardından gözler güncel ",
-      "eslesen": "youtube"
-    },
-    {
-      "baslik": "Malezya, Google'a zararlı içeriklere karşı yeterli önlem almadığı gerekçesiyle dava açtı",
-      "link": "https://www.trthaber.com/haber/dunya/malezya-googlea-zararli-iceriklere-karsi-yeterli-onlem-almadigi-gerekcesiyle-dava-acti-964447.html",
-      "kaynak": "TRT Haber",
-      "konu": "Gündem",
-      "tarih": "2026-11-25T13:16:00.000Z",
-      "resim": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2076000/google-reu-2076406.jpg",
-      "ozet": "Malezya, ABD'li teknoloji şirketi Google'a sahip olduğu YouTube platformundaki \"zararlı içeriklere karşı yeterli önlem almadığı\" gerekçesiyle yaklaşık 145,8 milyon dolarlık 2 ayrı dava açıldığını bildirdi.",
-      "eslesen": "youtube"
-    },
     {
       "baslik": "YouTube, İstediğiniz Zaman Değiştirebileceğiniz Yeni Uygulama İkonları Üzerinde Çalışıyor: İşte Tasarımlar!",
       "link": "https://www.webtekno.com/youtube-yeni-uygulama-ikonlari-tasarimlari-h229435.html",
@@ -67,7 +47,7 @@
       "url": "https://www.trthaber.com/sondakika_articles.rss",
       "durum": "OK",
       "okunan": 60,
-      "adet": 1
+      "adet": 0
     },
     {
       "kaynak": "Sabah",
@@ -90,7 +70,7 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 79,
+      "okunan": 80,
       "adet": 0
     },
     {
@@ -115,7 +95,7 @@
       "url": "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
       "durum": "OK",
       "okunan": 100,
-      "adet": 1
+      "adet": 0
     },
     {
       "kaynak": "BBC Türkçe",
