@@ -1,5 +1,5 @@
 {
-  "guncelleme": "2026-11-26T10:12:35.231Z",
+  "guncelleme": "2026-11-26T11:28:31.876Z",
   "haberler": [
     {
       "baslik": "YouTube, İstediğiniz Zaman Değiştirebileceğiniz Yeni Uygulama İkonları Üzerinde Çalışıyor: İşte Tasarımlar!",
@@ -20,16 +20,6 @@
       "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b068e289a30875a04579f1e.jpg",
       "ozet": "SEDA Sayan, Kafa TV’de yayınlanan programında ilişkiler üzerine açıklamalarda bulundu.",
       "eslesen": "kafa tv"
-    },
-    {
-      "baslik": "Büşra Develi: Fransız diyorlardı Gürcü çıktım",
-      "link": "https://www.hurriyet.com.tr/kelebek/televizyon/busra-deveci-fransiz-diyorlardi-gurcu-ciktim-43388717",
-      "kaynak": "Hürriyet Kelebek",
-      "konu": "Magazin",
-      "tarih": "2026-11-24T06:23:00.000Z",
-      "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b052d5e3516f14679ccc581.jpg",
-      "ozet": "OYUNCU Büşra Develi, YouTube’da yayınlanan ‘Fatih Altaylı ile Pazar Sohbeti’ programına konuk oldu.",
-      "eslesen": "youtube"
     }
   ],
   "kaynaklar": [
@@ -70,7 +60,7 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 80,
+      "okunan": 78,
       "adet": 0
     },
     {
@@ -167,7 +157,7 @@
       "url": "https://www.hurriyet.com.tr/rss/kelebek",
       "durum": "OK",
       "okunan": 100,
-      "adet": 2
+      "adet": 1
     },
     {
       "kaynak": "Beyazperde",
