@@ -1,6 +1,16 @@
 {
-  "guncelleme": "2026-11-26T17:09:55.487Z",
+  "guncelleme": "2026-11-26T17:59:24.683Z",
   "haberler": [
+    {
+      "baslik": "Uyuşturucu soruşturmasında 3 kişiye tutuklama talebi... İzzet Özilhan ve Cem Karcı’ya adli kontrol",
+      "link": "https://www.hurriyet.com.tr/gundem/uyusturucu-sorusturmasinda-3-kisiye-tutuklama-talebi-izzet-ozilhan-ve-cem-karciya-adli-kontrol-43392388",
+      "kaynak": "Hürriyet",
+      "konu": "Gündem",
+      "tarih": "2026-11-26T17:05:00.000Z",
+      "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b0866da08488df397511517.jpg",
+      "ozet": "İstanbul Cumhuriyet Başsavcılığı’nın yürüttüğü “uyuşturucu” soruşturması kapsamında, Saghar Shojaeı, iş insanı Muammer Kapucuoğlu ve sosyal medya fenomeni Cansu Taşkın tutuklama talebiyle sulh ceza hakimliğine sevk edild",
+      "eslesen": "sosyal medya fenomeni"
+    },
     {
       "baslik": "YouTube, İstediğiniz Zaman Değiştirebileceğiniz Yeni Uygulama İkonları Üzerinde Çalışıyor: İşte Tasarımlar!",
       "link": "https://www.webtekno.com/youtube-yeni-uygulama-ikonlari-tasarimlari-h229435.html",
@@ -60,8 +70,8 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 80,
-      "adet": 0
+      "okunan": 78,
+      "adet": 1
     },
     {
       "kaynak": "Habertürk",
