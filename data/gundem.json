@@ -1,6 +1,50 @@
 {
-  "guncelleme": "2026-11-26T04:34:14.585Z",
+  "guncelleme": "2026-11-26T05:48:30.917Z",
   "olaylar": [
+    {
+      "id": "canli-yUmcO5KHbxA",
+      "tur": "canli",
+      "metin": "Habertürk TV canlı yayına başladı: “#CANLI - Meteoroloji'den açıklama! Yağış yok, soğuk hava sürüyor”",
+      "tarih": "2026-11-26T05:48:30.917Z",
+      "videoId": "yUmcO5KHbxA",
+      "baslik": "#CANLI - Meteoroloji'den açıklama! Yağış yok, soğuk hava sürüyor",
+      "kanal": "Habertürk TV",
+      "kanalId": "UCn6dNfiRE_Xunu7iMyvD7AA",
+      "resim": "https://i.ytimg.com/vi/yUmcO5KHbxA/mqdefault.jpg?v=2"
+    },
+    {
+      "id": "canli-cDGucSHDYWs",
+      "tur": "canli",
+      "metin": "CNN TÜRK canlı yayına başladı: “Ukrayna'ya F-16 Desteği! ABD Onay Verdi | CANLI HABER”",
+      "tarih": "2026-11-26T05:48:30.917Z",
+      "videoId": "cDGucSHDYWs",
+      "baslik": "Ukrayna'ya F-16 Desteği! ABD Onay Verdi | CANLI HABER",
+      "kanal": "CNN TÜRK",
+      "kanalId": "UCV6zcRug6Hqp1UX_FdyUeBg",
+      "resim": "https://i.ytimg.com/vi/cDGucSHDYWs/mqdefault.jpg?v=6b07bfc5"
+    },
+    {
+      "id": "canli-I-ROoOw7Q_M",
+      "tur": "canli",
+      "metin": "CNN TÜRK canlı yayına başladı: “ARALIK Ayına Dikkat! İstanbul'da Kar Yağacak Mı? | CANLI HABER”",
+      "tarih": "2026-11-26T05:48:30.917Z",
+      "videoId": "I-ROoOw7Q_M",
+      "baslik": "ARALIK Ayına Dikkat! İstanbul'da Kar Yağacak Mı? | CANLI HABER",
+      "kanal": "CNN TÜRK",
+      "kanalId": "UCV6zcRug6Hqp1UX_FdyUeBg",
+      "resim": "https://i.ytimg.com/vi/I-ROoOw7Q_M/mqdefault.jpg?v=6b07bf37"
+    },
+    {
+      "id": "esik-100000-k_FGhRf24lA",
+      "tur": "esik",
+      "metin": "netd müzik kanalının “Eypio - Yalan” videosu 11 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-26T05:48:30.917Z",
+      "videoId": "k_FGhRf24lA",
+      "baslik": "Eypio - Yalan",
+      "kanal": "netd müzik",
+      "kanalId": "UCR5wZcXtOUka8jTA57flzMg",
+      "resim": "https://i.ytimg.com/vi/k_FGhRf24lA/mqdefault.jpg"
+    },
     {
       "id": "esik-100000-dAOcAdWIKYI",
       "tur": "esik",
