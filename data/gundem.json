@@ -1,6 +1,94 @@
 {
-  "guncelleme": "2026-11-26T15:27:50.822Z",
+  "guncelleme": "2026-11-26T16:32:52.161Z",
   "olaylar": [
+    {
+      "id": "canli-A2hIJhkmWoU",
+      "tur": "canli",
+      "metin": "Habertürk TV canlı yayına başladı: “#CANLI - Fon Soruşturmasına Dair Ortak Açıklama!”",
+      "tarih": "2026-11-26T16:32:52.161Z",
+      "videoId": "A2hIJhkmWoU",
+      "baslik": "#CANLI - Fon Soruşturmasına Dair Ortak Açıklama!",
+      "kanal": "Habertürk TV",
+      "kanalId": "UCn6dNfiRE_Xunu7iMyvD7AA",
+      "resim": "https://i.ytimg.com/vi/A2hIJhkmWoU/mqdefault.jpg?v=5"
+    },
+    {
+      "id": "canli-8IAyoB-iDi8",
+      "tur": "canli",
+      "metin": "CNN TÜRK canlı yayına başladı: “SON DAKİKA🚨Gözler Ankara'da: Beştepe'de Fon Tasfiyesi Açıklaması | CANLI HABER”",
+      "tarih": "2026-11-26T16:32:52.161Z",
+      "videoId": "8IAyoB-iDi8",
+      "baslik": "SON DAKİKA🚨Gözler Ankara'da: Beştepe'de Fon Tasfiyesi Açıklaması | CANLI HABER",
+      "kanal": "CNN TÜRK",
+      "kanalId": "UCV6zcRug6Hqp1UX_FdyUeBg",
+      "resim": "https://i.ytimg.com/vi/8IAyoB-iDi8/mqdefault.jpg?v=6b0855b7"
+    },
+    {
+      "id": "canli-gRXbeEYGF40",
+      "tur": "canli",
+      "metin": "Medyascope TV canlı yayına başladı: “Akın Gürlek, Cevdet Yılmaz, ve Mehmet Şimşek'ten fon krizine ilişkin açıklama #CANLI”",
+      "tarih": "2026-11-26T16:32:52.161Z",
+      "videoId": "gRXbeEYGF40",
+      "baslik": "Akın Gürlek, Cevdet Yılmaz, ve Mehmet Şimşek'ten fon krizine ilişkin açıklama #CANLI",
+      "kanal": "Medyascope TV",
+      "kanalId": "UCNCVuaQDvPrZ4oTKG90iqOA",
+      "resim": "https://i.ytimg.com/vi/gRXbeEYGF40/mqdefault.jpg?v=6b08530b"
+    },
+    {
+      "id": "canli-g2qMlakay-c",
+      "tur": "canli",
+      "metin": "Cüneyt Özdemir canlı yayına başladı: “FON SOYGUNUNDA TARİHİ BASIN TOPLANTISI! CÜNEYT ÖZDEMİR CANLI YAYINDA YORUMLUYOR”",
+      "tarih": "2026-11-26T16:32:52.161Z",
+      "videoId": "g2qMlakay-c",
+      "baslik": "FON SOYGUNUNDA TARİHİ BASIN TOPLANTISI! CÜNEYT ÖZDEMİR CANLI YAYINDA YORUMLUYOR",
+      "kanal": "Cüneyt Özdemir",
+      "kanalId": "UCkwHQ7DWv9aqEtvAOSO74dQ",
+      "resim": "https://i.ytimg.com/vi/g2qMlakay-c/mqdefault.jpg?v=6b083a03"
+    },
+    {
+      "id": "esik-100000-pqM1e_e_FXw",
+      "tur": "esik",
+      "metin": "TÜRKPRO kanalının “GTA 6 DA EN BÜYÜK ARABAYI BULDUM - GTA 6” videosu 5 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-26T16:32:52.161Z",
+      "videoId": "pqM1e_e_FXw",
+      "baslik": "GTA 6 DA EN BÜYÜK ARABAYI BULDUM - GTA 6",
+      "kanal": "TÜRKPRO",
+      "kanalId": "UCz8lelVfalizvMb2bHQjDvg",
+      "resim": "https://i.ytimg.com/vi/pqM1e_e_FXw/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-MYTcWRdtr6k",
+      "tur": "esik",
+      "metin": "Fenerbahçe SK kanalının “Teknik Direktörümüz Emre Belözoğlu'nun maç sonu basın toplantısı | Shakhtar Donetsk 0-1 Fenerbahçe” videosu 17 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-26T16:32:52.161Z",
+      "videoId": "MYTcWRdtr6k",
+      "baslik": "Teknik Direktörümüz Emre Belözoğlu'nun maç sonu basın toplantısı | Shakhtar Donetsk 0-1 Fenerbahçe",
+      "kanal": "Fenerbahçe SK",
+      "kanalId": "UCgqlho3-8a6FmDqQm7Q6gJw",
+      "resim": "https://i.ytimg.com/vi/MYTcWRdtr6k/mqdefault.jpg"
+    },
+    {
+      "id": "esik-500000-dAOcAdWIKYI",
+      "tur": "esik",
+      "metin": "TRT SPOR kanalının “Şampiyonlar Ligi 5. Hafta | Sporting - Manchester United (Özet)” videosu 18 saatte 500 bin izlenmeyi geçti.",
+      "tarih": "2026-11-26T16:32:52.161Z",
+      "videoId": "dAOcAdWIKYI",
+      "baslik": "Şampiyonlar Ligi 5. Hafta | Sporting - Manchester United (Özet)",
+      "kanal": "TRT SPOR",
+      "kanalId": "UCfYNqluOf8EbQkL44otydMw",
+      "resim": "https://i.ytimg.com/vi/dAOcAdWIKYI/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-1vFLw914aD8",
+      "tur": "esik",
+      "metin": "Hirai Zerdüş - Topic kanalının “Seni İsterim” videosu 2 günde 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-26T16:32:52.161Z",
+      "videoId": "1vFLw914aD8",
+      "baslik": "Seni İsterim",
+      "kanal": "Hirai Zerdüş - Topic",
+      "kanalId": "UClXDnFkShjIDpBbX6d4xp3g",
+      "resim": "https://i.ytimg.com/vi/1vFLw914aD8/mqdefault.jpg"
+    },
     {
       "id": "canli-X7Vb_qfDJbM",
       "tur": "canli",
