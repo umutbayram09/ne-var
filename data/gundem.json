@@ -1,6 +1,28 @@
 {
-  "guncelleme": "2026-11-27T05:52:38.960Z",
+  "guncelleme": "2026-11-27T06:57:31.731Z",
   "olaylar": [
+    {
+      "id": "plan-pzerbLFg2ow",
+      "tur": "plan",
+      "metin": "CNN TÜRK, Cuma 10:00 için canlı yayın planladı: “Meclis Koridorlarında Ziyaret Rüzgarı! | CANLI HABER”",
+      "tarih": "2026-11-27T06:57:31.731Z",
+      "videoId": "pzerbLFg2ow",
+      "baslik": "Meclis Koridorlarında Ziyaret Rüzgarı! | CANLI HABER",
+      "kanal": "CNN TÜRK",
+      "kanalId": "UCV6zcRug6Hqp1UX_FdyUeBg",
+      "resim": "https://i.ytimg.com/vi/pzerbLFg2ow/mqdefault.jpg?v=6b092946"
+    },
+    {
+      "id": "esik-100000-aG_-gKK2qOg",
+      "tur": "esik",
+      "metin": "MasterChef Türkiye kanalının “Somer Şef ve Tolğa gerginlik yaşadı. #MasterChefTürkiye #MasterChef #ACUNMEDYA #TV8” videosu 10 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T06:57:31.731Z",
+      "videoId": "aG_-gKK2qOg",
+      "baslik": "Somer Şef ve Tolğa gerginlik yaşadı. #MasterChefTürkiye #MasterChef #ACUNMEDYA #TV8",
+      "kanal": "MasterChef Türkiye",
+      "kanalId": "UCrZfdLWzSG2LOR2hZWWLA8g",
+      "resim": "https://i.ytimg.com/vi/aG_-gKK2qOg/mqdefault.jpg"
+    },
     {
       "id": "canli-PlTlEn8iqD4",
       "tur": "canli",
@@ -2101,50 +2123,6 @@
       "kanal": "Bora Kontaş",
       "kanalId": "UCqjp1xj3gTox-T4V_JlMvTQ",
       "resim": "https://i.ytimg.com/vi/2AYgyn9KHMA/mqdefault.jpg"
-    },
-    {
-      "id": "esik-1000000-4gtaa-sUxBM",
-      "tur": "esik",
-      "metin": "TRT SPOR kanalının “Şampiyonlar Ligi 5. Hafta | Real Madrid - PSV (Özet)” videosu 8 saatte 1 milyon izlenmeyi geçti.",
-      "tarih": "2026-11-25T06:55:45.837Z",
-      "videoId": "4gtaa-sUxBM",
-      "baslik": "Şampiyonlar Ligi 5. Hafta | Real Madrid - PSV (Özet)",
-      "kanal": "TRT SPOR",
-      "kanalId": "UCfYNqluOf8EbQkL44otydMw",
-      "resim": "https://i.ytimg.com/vi/4gtaa-sUxBM/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-DcVYCEGRpw0",
-      "tur": "esik",
-      "metin": "MasterChef Türkiye kanalının “MasterChef Türkiye Geniş Özet | 24.11.2026 @masterchefturkiye​” videosu 9 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T06:55:45.837Z",
-      "videoId": "DcVYCEGRpw0",
-      "baslik": "MasterChef Türkiye Geniş Özet | 24.11.2026 @masterchefturkiye​",
-      "kanal": "MasterChef Türkiye",
-      "kanalId": "UCrZfdLWzSG2LOR2hZWWLA8g",
-      "resim": "https://i.ytimg.com/vi/DcVYCEGRpw0/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-atYSB9PuaDs",
-      "tur": "esik",
-      "metin": "MasterChef Türkiye kanalının “MasterChef Türkiye 25.11.2026 Tanıtımı | MasterChef Türkiye @masterchefturkiye” videosu 10 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T06:55:45.837Z",
-      "videoId": "atYSB9PuaDs",
-      "baslik": "MasterChef Türkiye 25.11.2026 Tanıtımı | MasterChef Türkiye @masterchefturkiye",
-      "kanal": "MasterChef Türkiye",
-      "kanalId": "UCrZfdLWzSG2LOR2hZWWLA8g",
-      "resim": "https://i.ytimg.com/vi/atYSB9PuaDs/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-tw4YpooKVxI",
-      "tur": "esik",
-      "metin": "Evrim Ağacı kanalının “Meyve Nedir?” videosu 15 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T06:55:45.837Z",
-      "videoId": "tw4YpooKVxI",
-      "baslik": "Meyve Nedir?",
-      "kanal": "Evrim Ağacı",
-      "kanalId": "UCatnasFAiXUvWwH8NlSdd3A",
-      "resim": "https://i.ytimg.com/vi/tw4YpooKVxI/mqdefault.jpg"
     }
   ]
 }
