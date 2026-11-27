@@ -1,6 +1,83 @@
 {
-  "guncelleme": "2026-11-27T12:54:14.777Z",
+  "guncelleme": "2026-11-27T14:11:24.805Z",
   "olaylar": [
+    {
+      "id": "canli-0U7IEkA5Mlw",
+      "tur": "canli",
+      "metin": "Habertürk TV canlı yayına başladı: “#CANLI - Habertürk Manşet başladı”",
+      "tarih": "2026-11-27T14:11:24.805Z",
+      "videoId": "0U7IEkA5Mlw",
+      "baslik": "#CANLI - Habertürk Manşet başladı",
+      "kanal": "Habertürk TV",
+      "kanalId": "UCn6dNfiRE_Xunu7iMyvD7AA",
+      "resim": "https://i.ytimg.com/vi/0U7IEkA5Mlw/mqdefault.jpg?v=3"
+    },
+    {
+      "id": "canli-GyhP6AT80pM",
+      "tur": "canli",
+      "metin": "CNN TÜRK canlı yayına başladı: “Baltık'ta Nükleer Gölgeli Petrol Sevki! | CANLI HABER”",
+      "tarih": "2026-11-27T14:11:24.805Z",
+      "videoId": "GyhP6AT80pM",
+      "baslik": "Baltık'ta Nükleer Gölgeli Petrol Sevki! | CANLI HABER",
+      "kanal": "CNN TÜRK",
+      "kanalId": "UCV6zcRug6Hqp1UX_FdyUeBg",
+      "resim": "https://i.ytimg.com/vi/GyhP6AT80pM/mqdefault.jpg?v=6b097dac"
+    },
+    {
+      "id": "plan-anqYLtopN6Y",
+      "tur": "plan",
+      "metin": "Bora Kontaş, Cuma 17:30 için canlı yayın planladı: “GECE 3'te HAVUZ NEDEN KIRMIZI OLDU ?! (büyük gizem)”",
+      "tarih": "2026-11-27T14:11:24.805Z",
+      "videoId": "anqYLtopN6Y",
+      "baslik": "GECE 3'te HAVUZ NEDEN KIRMIZI OLDU ?! (büyük gizem)",
+      "kanal": "Bora Kontaş",
+      "kanalId": "UCqjp1xj3gTox-T4V_JlMvTQ",
+      "resim": "https://i.ytimg.com/vi/anqYLtopN6Y/mqdefault.jpg"
+    },
+    {
+      "id": "canli-zYlbVsfekFY",
+      "tur": "canli",
+      "metin": "Medyascope TV canlı yayına başladı: “Fon krizi sahiden çözüldü mü? | Çözüm süreci tartışmaları | Haftaya Bakış #CANLI”",
+      "tarih": "2026-11-27T14:11:24.805Z",
+      "videoId": "zYlbVsfekFY",
+      "baslik": "Fon krizi sahiden çözüldü mü? | Çözüm süreci tartışmaları | Haftaya Bakış #CANLI",
+      "kanal": "Medyascope TV",
+      "kanalId": "UCNCVuaQDvPrZ4oTKG90iqOA",
+      "resim": "https://i.ytimg.com/vi/zYlbVsfekFY/mqdefault.jpg?v=6b0947bf"
+    },
+    {
+      "id": "esik-100000-kq4AHvOeTAQ",
+      "tur": "esik",
+      "metin": "TAMER kanalının “GTA 6 TÜRKÇE DUBLAJ 10. Bölüm” videosu 22 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T14:11:24.805Z",
+      "videoId": "kq4AHvOeTAQ",
+      "baslik": "GTA 6 TÜRKÇE DUBLAJ 10. Bölüm",
+      "kanal": "TAMER",
+      "kanalId": "UCu-OwDLiQfgYPHk2d8AwMdQ",
+      "resim": "https://i.ytimg.com/vi/kq4AHvOeTAQ/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-mVLUS7ZHzk8",
+      "tur": "esik",
+      "metin": "Enes Arslan kanalının “KORKUNÇ CLAPPING CAT'İN GEZEGENİNE GİDEN EN UZUN MERDİVENİ BULDUK 😱 Minecraft” videosu 1 günde 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T14:11:24.805Z",
+      "videoId": "mVLUS7ZHzk8",
+      "baslik": "KORKUNÇ CLAPPING CAT'İN GEZEGENİNE GİDEN EN UZUN MERDİVENİ BULDUK 😱 Minecraft",
+      "kanal": "Enes Arslan",
+      "kanalId": "UCOsvKKA3QwPV2Wo05q2m8tg",
+      "resim": "https://i.ytimg.com/vi/mVLUS7ZHzk8/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-f5fpr3_oGzk",
+      "tur": "esik",
+      "metin": "Allame Official kanalının “ALLAME x SANSAR / HİÇ SEVMEMİŞ GİBİ” videosu 3 günde 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T14:11:24.805Z",
+      "videoId": "f5fpr3_oGzk",
+      "baslik": "ALLAME x SANSAR / HİÇ SEVMEMİŞ GİBİ",
+      "kanal": "Allame Official",
+      "kanalId": "UCjIg0KHC-pKA2aKzDHjYLmA",
+      "resim": "https://i.ytimg.com/vi/f5fpr3_oGzk/mqdefault.jpg"
+    },
     {
       "id": "canli-4Ya58fjwATE",
       "tur": "canli",
@@ -2244,39 +2321,6 @@
       "kanal": "Gürol Çalışkan",
       "kanalId": "UCo6xy_aqhmO2A4oZZs7vt7g",
       "resim": "https://i.ytimg.com/vi/A30cBa0acNc/mqdefault.jpg"
-    },
-    {
-      "id": "canli-EXezRQbvRCk",
-      "tur": "canli",
-      "metin": "Nevşin Mengü canlı yayına başladı: “Fatma Betül Sayan'ın Tahliyesi Hayati Yazıcı’nın İstifası Gündeme Oturdu. Fon Krizi Bitti mi?”",
-      "tarih": "2026-11-25T12:57:52.420Z",
-      "videoId": "EXezRQbvRCk",
-      "baslik": "Fatma Betül Sayan'ın Tahliyesi Hayati Yazıcı’nın İstifası Gündeme Oturdu. Fon Krizi Bitti mi?",
-      "kanal": "Nevşin Mengü",
-      "kanalId": "UCrG27KDq7eW4YoEOYsalU9g",
-      "resim": "https://i.ytimg.com/vi/EXezRQbvRCk/mqdefault.jpg?v=6b06c19e"
-    },
-    {
-      "id": "esik-100000-wUK_yF4jjms",
-      "tur": "esik",
-      "metin": "TRT SPOR kanalının “Şampiyonlar Ligi 5. Hafta | Leipzig - Lens (Özet)” videosu 14 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T12:57:52.420Z",
-      "videoId": "wUK_yF4jjms",
-      "baslik": "Şampiyonlar Ligi 5. Hafta | Leipzig - Lens (Özet)",
-      "kanal": "TRT SPOR",
-      "kanalId": "UCfYNqluOf8EbQkL44otydMw",
-      "resim": "https://i.ytimg.com/vi/wUK_yF4jjms/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-pzVzFFr0HeE",
-      "tur": "esik",
-      "metin": "EmirhanCTN Roblox kanalının “BU OYUN ROBLOX'TAN YASAKLANMALI... 💀” videosu 22 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T12:57:52.420Z",
-      "videoId": "pzVzFFr0HeE",
-      "baslik": "BU OYUN ROBLOX'TAN YASAKLANMALI... 💀",
-      "kanal": "EmirhanCTN Roblox",
-      "kanalId": "UCKyasU_ct-abyrElyMt09tg",
-      "resim": "https://i.ytimg.com/vi/pzVzFFr0HeE/mqdefault.jpg"
     }
   ]
 }
