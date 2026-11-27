@@ -1,6 +1,83 @@
 {
-  "guncelleme": "2026-11-27T16:30:00.405Z",
+  "guncelleme": "2026-11-27T17:30:11.392Z",
   "olaylar": [
+    {
+      "id": "esik-500000-OYEnYKLhgv0",
+      "tur": "esik",
+      "metin": "Orkun Işıtmak kanalının “HİNDİSTAN’IN EN DÜŞÜK PUANLI RESTORANTLARI!” videosu 3 saatte 500 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T17:30:11.392Z",
+      "videoId": "OYEnYKLhgv0",
+      "baslik": "HİNDİSTAN’IN EN DÜŞÜK PUANLI RESTORANTLARI!",
+      "kanal": "Orkun Işıtmak",
+      "kanalId": "UCIXYyHANDvinQMIdauzSNJA",
+      "resim": "https://i.ytimg.com/vi/OYEnYKLhgv0/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-TLsyyZhXj7U",
+      "tur": "esik",
+      "metin": "Ferited kanalının “PUBG” videosu 5 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T17:30:11.392Z",
+      "videoId": "TLsyyZhXj7U",
+      "baslik": "PUBG",
+      "kanal": "Ferited",
+      "kanalId": "UCKizsKkBBjuEoY_fgRx-4QQ",
+      "resim": "https://i.ytimg.com/vi/TLsyyZhXj7U/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-K51I2m7Y9jU",
+      "tur": "esik",
+      "metin": "TÜRKPRO kanalının “GTA 6 DA SAKIN BU UÇAĞA BİNMEYİN - GTA 6” videosu 5 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T17:30:11.392Z",
+      "videoId": "K51I2m7Y9jU",
+      "baslik": "GTA 6 DA SAKIN BU UÇAĞA BİNMEYİN - GTA 6",
+      "kanal": "TÜRKPRO",
+      "kanalId": "UCz8lelVfalizvMb2bHQjDvg",
+      "resim": "https://i.ytimg.com/vi/K51I2m7Y9jU/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-KW_M3NMD-j4",
+      "tur": "esik",
+      "metin": "DW Türkçe kanalının “Gürcistan televizyonu Beşiktaş taraftarını suçladı ve ‘Türkiye’de…'” videosu 8 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T17:30:11.392Z",
+      "videoId": "KW_M3NMD-j4",
+      "baslik": "Gürcistan televizyonu Beşiktaş taraftarını suçladı ve ‘Türkiye’de…'",
+      "kanal": "DW Türkçe",
+      "kanalId": "UCpi_jv70749NkAmkdugyiPQ",
+      "resim": "https://i.ytimg.com/vi/KW_M3NMD-j4/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-ZE6Gfsk-ntI",
+      "tur": "esik",
+      "metin": "KAFA TV kanalının “O lavukla Birlikte Olma I Seda Sayan İle Bacıların Bacısı” videosu 3 günde 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T17:30:11.392Z",
+      "videoId": "ZE6Gfsk-ntI",
+      "baslik": "O lavukla Birlikte Olma I Seda Sayan İle Bacıların Bacısı",
+      "kanal": "KAFA TV",
+      "kanalId": "UC3UYYweSGUJgk_TlUzpEaBw",
+      "resim": "https://i.ytimg.com/vi/ZE6Gfsk-ntI/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-Ws51V6KBFLc",
+      "tur": "esik",
+      "metin": "Ümidi kanalının “ROBERTO CARLOS 32 METRE FRİKİK GOL 😱 KRAL GERİ DÖNDÜ ! ÜMİDİ VS EMJAN KAPIŞMA LİGİ 2027 !” videosu 12 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T17:30:11.392Z",
+      "videoId": "Ws51V6KBFLc",
+      "baslik": "ROBERTO CARLOS 32 METRE FRİKİK GOL 😱 KRAL GERİ DÖNDÜ ! ÜMİDİ VS EMJAN KAPIŞMA LİGİ 2027 !",
+      "kanal": "Ümidi",
+      "kanalId": "UCHA_Ac7zHPCxQi3ZBbkBLvA",
+      "resim": "https://i.ytimg.com/vi/Ws51V6KBFLc/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-GSt1WR33J5k",
+      "tur": "esik",
+      "metin": "Lia kanalının “YA DÜNYA BÖYLE OLSAYDI?!” videosu 1 günde 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T17:30:11.392Z",
+      "videoId": "GSt1WR33J5k",
+      "baslik": "YA DÜNYA BÖYLE OLSAYDI?!",
+      "kanal": "Lia",
+      "kanalId": "UCZFNWv60vxM8dBmGUm7-CIg",
+      "resim": "https://i.ytimg.com/vi/GSt1WR33J5k/mqdefault.jpg"
+    },
     {
       "id": "plan-9bOpV-OSxyI",
       "tur": "plan",
@@ -2255,50 +2332,6 @@
       "kanal": "TGV Cinemas",
       "kanalId": "UCS0iQJmoV4Jajja_ZA8ES4g",
       "resim": "https://i.ytimg.com/vi/g_5cTwVFU4k/mqdefault.jpg"
-    },
-    {
-      "id": "plan-7xQfzubnjUE",
-      "tur": "plan",
-      "metin": "Socrates Dergi, Perşembe 00:45 için canlı yayın planladı: “🔴 CANLI | Shakhtar Donetsk - Fenerbahçe, 18 Yıl Sonra Stamford, İlk 11'ler | Şampiyonlar Lokali #13”",
-      "tarih": "2026-11-25T16:37:43.294Z",
-      "videoId": "7xQfzubnjUE",
-      "baslik": "🔴 CANLI | Shakhtar Donetsk - Fenerbahçe, 18 Yıl Sonra Stamford, İlk 11'ler | Şampiyonlar Lokali #13",
-      "kanal": "Socrates Dergi",
-      "kanalId": "UCvgwLFmnppZoPVBQJwPaNsA",
-      "resim": "https://i.ytimg.com/vi/7xQfzubnjUE/mqdefault.jpg?v=6b07028c"
-    },
-    {
-      "id": "esik-100000-DHr3JRL7UXM",
-      "tur": "esik",
-      "metin": "Murat Soner kanalının “DİZİLER NEDEN YAYINLANAMIYOR? DİZİ KRİZİ ELEŞTİRİSİ” videosu 3 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T16:37:43.294Z",
-      "videoId": "DHr3JRL7UXM",
-      "baslik": "DİZİLER NEDEN YAYINLANAMIYOR? DİZİ KRİZİ ELEŞTİRİSİ",
-      "kanal": "Murat Soner",
-      "kanalId": "UCTpnOrDAyEUsCCfC0AE6zDw",
-      "resim": "https://i.ytimg.com/vi/DHr3JRL7UXM/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-2sd2jZ3fGfo",
-      "tur": "esik",
-      "metin": "TÜRKPRO kanalının “GTA 6 DA EN PAHALI GIZLI ARABAYI BULDUM - GTA 6” videosu 5 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T16:37:43.294Z",
-      "videoId": "2sd2jZ3fGfo",
-      "baslik": "GTA 6 DA EN PAHALI GIZLI ARABAYI BULDUM - GTA 6",
-      "kanal": "TÜRKPRO",
-      "kanalId": "UCz8lelVfalizvMb2bHQjDvg",
-      "resim": "https://i.ytimg.com/vi/2sd2jZ3fGfo/mqdefault.jpg"
-    },
-    {
-      "id": "esik-500000--9l7t8DvnfM",
-      "tur": "esik",
-      "metin": "TÜRKPRO kanalının “GTA 6 DA ZENGİN GARAJIN KİLİDİNİ AÇTIM - GTA 6” videosu 2 günde 500 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T16:37:43.294Z",
-      "videoId": "-9l7t8DvnfM",
-      "baslik": "GTA 6 DA ZENGİN GARAJIN KİLİDİNİ AÇTIM - GTA 6",
-      "kanal": "TÜRKPRO",
-      "kanalId": "UCz8lelVfalizvMb2bHQjDvg",
-      "resim": "https://i.ytimg.com/vi/-9l7t8DvnfM/mqdefault.jpg"
     }
   ]
 }
