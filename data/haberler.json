@@ -1,5 +1,5 @@
 {
-  "guncelleme": "2026-11-27T10:59:02.611Z",
+  "guncelleme": "2026-11-27T11:58:17.636Z",
   "haberler": [
     {
       "baslik": "YouTube Premium Aboneleri Artık Uygulama Simgesini Değiştirebilecek: İşte Yeni Tasarımlar",
@@ -20,16 +20,6 @@
       "resim": "https://imgrosetta.webtekno.com/file/698584/698584-640xauto.jpg",
       "ozet": "YouTube, uygulama ikonunu değiştirmek isteyenler için yedi seçenek hazırlıyor.",
       "eslesen": "youtube"
-    },
-    {
-      "baslik": "Seda Sayan: Ex’ten next olmaz",
-      "link": "https://www.hurriyet.com.tr/kelebek/televizyon/seda-sayan-exten-next-olmaz-43390280",
-      "kaynak": "Hürriyet Kelebek",
-      "konu": "Magazin",
-      "tarih": "2026-11-25T07:29:55.000Z",
-      "resim": "https://image.hurimg.com/i/hurriyet/90/620x350/6b068e289a30875a04579f1e.jpg",
-      "ozet": "SEDA Sayan, Kafa TV’de yayınlanan programında ilişkiler üzerine açıklamalarda bulundu.",
-      "eslesen": "kafa tv"
     }
   ],
   "kaynaklar": [
@@ -70,7 +60,7 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 68,
+      "okunan": 70,
       "adet": 0
     },
     {
@@ -167,7 +157,7 @@
       "url": "https://www.hurriyet.com.tr/rss/kelebek",
       "durum": "OK",
       "okunan": 99,
-      "adet": 1
+      "adet": 0
     },
     {
       "kaynak": "Beyazperde",
