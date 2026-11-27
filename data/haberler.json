@@ -1,6 +1,16 @@
 {
-  "guncelleme": "2026-11-27T08:47:02.467Z",
+  "guncelleme": "2026-11-27T10:08:35.163Z",
   "haberler": [
+    {
+      "baslik": "YouTube Premium Aboneleri Artık Uygulama Simgesini Değiştirebilecek: İşte Yeni Tasarımlar",
+      "link": "https://www.webtekno.com/youtube-premium-uygulama-simgesi-degistirme-h229537.html",
+      "kaynak": "Webtekno",
+      "konu": "Teknoloji",
+      "tarih": "2026-11-27T08:51:13.000Z",
+      "resim": "https://imgrosetta.webtekno.com/file/695644/695644-640xauto.jpg",
+      "ozet": "YouTube, yıllardır gördüğümüz klasik kırmızı oynatma butonuna seçenek sunan yeni bir kişiselleştirme özelliğini kullanıma açmaya başladı. Android ve iOS'ta etkinleşen bu yenilik yalnızca YouTube Premium abonelerine özel.",
+      "eslesen": "youtube"
+    },
     {
       "baslik": "YouTube, İstediğiniz Zaman Değiştirebileceğiniz Yeni Uygulama İkonları Üzerinde Çalışıyor: İşte Tasarımlar!",
       "link": "https://www.webtekno.com/youtube-yeni-uygulama-ikonlari-tasarimlari-h229435.html",
@@ -60,7 +70,7 @@
       "konu": "Gündem",
       "url": "https://www.hurriyet.com.tr/rss/anasayfa",
       "durum": "OK",
-      "okunan": 69,
+      "okunan": 71,
       "adet": 0
     },
     {
@@ -125,7 +135,7 @@
       "url": "https://www.webtekno.com/rss.xml",
       "durum": "OK",
       "okunan": 50,
-      "adet": 1
+      "adet": 2
     },
     {
       "kaynak": "ShiftDelete.Net",
