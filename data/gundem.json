@@ -1,6 +1,39 @@
 {
-  "guncelleme": "2026-11-27T00:49:58.395Z",
+  "guncelleme": "2026-11-27T02:13:44.935Z",
   "olaylar": [
+    {
+      "id": "esik-100000-sbTXTy99ukM",
+      "tur": "esik",
+      "metin": "TRT SPOR kanalının “Konferans Ligi 4. Hafta | CSKA Sofia - Trabzonspor (Özet)” videosu 4 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T02:13:44.935Z",
+      "videoId": "sbTXTy99ukM",
+      "baslik": "Konferans Ligi 4. Hafta | CSKA Sofia - Trabzonspor (Özet)",
+      "kanal": "TRT SPOR",
+      "kanalId": "UCfYNqluOf8EbQkL44otydMw",
+      "resim": "https://i.ytimg.com/vi/sbTXTy99ukM/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-Tu3tU7jw-cU",
+      "tur": "esik",
+      "metin": "RadikalVEVO kanalının “Radikal - GİTSEM KALSAM” videosu 5 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T02:13:44.935Z",
+      "videoId": "Tu3tU7jw-cU",
+      "baslik": "Radikal - GİTSEM KALSAM",
+      "kanal": "RadikalVEVO",
+      "kanalId": "UCEJXD1UwXSo25vuHVSxlHBA",
+      "resim": "https://i.ytimg.com/vi/Tu3tU7jw-cU/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-oT3CyCJkTIs",
+      "tur": "esik",
+      "metin": "CombatRy kanalının “Vandal ve Phantom Devri Bitti mi? (12 Saat Sadece Warden Oynadım)” videosu 11 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-27T02:13:44.935Z",
+      "videoId": "oT3CyCJkTIs",
+      "baslik": "Vandal ve Phantom Devri Bitti mi? (12 Saat Sadece Warden Oynadım)",
+      "kanal": "CombatRy",
+      "kanalId": "UCbH-YyF3EItOC73yWn2F_5w",
+      "resim": "https://i.ytimg.com/vi/oT3CyCJkTIs/mqdefault.jpg"
+    },
     {
       "id": "esik-100000-3-wh6fWkamo",
       "tur": "esik",
@@ -2145,17 +2178,6 @@
       "kanal": "Easter GamersTv",
       "kanalId": "UCUGkSxaVP_65NyK8fUqPRIg",
       "resim": "https://i.ytimg.com/vi/lGK8euOKUA4/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-9fpC7PC7uy0",
-      "tur": "esik",
-      "metin": "TRT SPOR kanalının “Şampiyonlar Ligi 5. Hafta | Arsenal - Borussia Dortmund (Özet)” videosu 4 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T02:12:19.745Z",
-      "videoId": "9fpC7PC7uy0",
-      "baslik": "Şampiyonlar Ligi 5. Hafta | Arsenal - Borussia Dortmund (Özet)",
-      "kanal": "TRT SPOR",
-      "kanalId": "UCfYNqluOf8EbQkL44otydMw",
-      "resim": "https://i.ytimg.com/vi/9fpC7PC7uy0/mqdefault.jpg"
     }
   ]
 }
