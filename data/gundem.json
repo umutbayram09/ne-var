@@ -1,6 +1,17 @@
 {
-  "guncelleme": "2026-11-28T01:47:41.780Z",
+  "guncelleme": "2026-11-28T02:44:00.220Z",
   "olaylar": [
+    {
+      "id": "esik-100000-aUT56fjgCF0",
+      "tur": "esik",
+      "metin": "KAFA TV kanalının “Sarayda Çok İnsan Var Anacım I Dolunay Soysert İle Ne Münasebet” videosu 2 günde 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-28T02:44:00.220Z",
+      "videoId": "aUT56fjgCF0",
+      "baslik": "Sarayda Çok İnsan Var Anacım I Dolunay Soysert İle Ne Münasebet",
+      "kanal": "KAFA TV",
+      "kanalId": "UC3UYYweSGUJgk_TlUzpEaBw",
+      "resim": "https://i.ytimg.com/vi/aUT56fjgCF0/mqdefault.jpg"
+    },
     {
       "id": "esik-500000-gSSgO1QijgI",
       "tur": "esik",
@@ -2343,17 +2354,6 @@
       "kanal": "Emrecan Önal",
       "kanalId": "UCrOw7gG1XAul0lz4iZRianA",
       "resim": "https://i.ytimg.com/vi/FgLm2Tuh0uI/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-_K3ZGZsWiMM",
-      "tur": "esik",
-      "metin": "TAMER kanalının “GTA 6 TÜRKÇE DUBLAJ 9. Bölüm” videosu 11 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-26T02:10:30.676Z",
-      "videoId": "_K3ZGZsWiMM",
-      "baslik": "GTA 6 TÜRKÇE DUBLAJ 9. Bölüm",
-      "kanal": "TAMER",
-      "kanalId": "UCu-OwDLiQfgYPHk2d8AwMdQ",
-      "resim": "https://i.ytimg.com/vi/_K3ZGZsWiMM/mqdefault.jpg"
     }
   ]
 }
