@@ -1,6 +1,17 @@
 {
-  "guncelleme": "2026-11-27T23:20:22.195Z",
+  "guncelleme": "2026-11-28T00:15:46.871Z",
   "olaylar": [
+    {
+      "id": "esik-100000-3GnwJuzTLiM",
+      "tur": "esik",
+      "metin": "Orkun Işıtmak kanalının “\"NE DEDİN YA SEN?\"” videosu 2 günde 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-28T00:15:46.871Z",
+      "videoId": "3GnwJuzTLiM",
+      "baslik": "\"NE DEDİN YA SEN?\"",
+      "kanal": "Orkun Işıtmak",
+      "kanalId": "UCIXYyHANDvinQMIdauzSNJA",
+      "resim": "https://i.ytimg.com/vi/3GnwJuzTLiM/mqdefault.jpg"
+    },
     {
       "id": "canli-R0eJBCkyTmc",
       "tur": "canli",
@@ -2343,28 +2354,6 @@
       "kanal": "KAFA TV",
       "kanalId": "UC3UYYweSGUJgk_TlUzpEaBw",
       "resim": "https://i.ytimg.com/vi/aUT56fjgCF0/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-tyN2FcSVbgI",
-      "tur": "esik",
-      "metin": "Fenerbahçe SK kanalının “🔵 Shakhtar Donetsk 0-1 Fenerbahçe | UEFA Şampiyonlar Ligi 5. Hafta” videosu 1 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T23:40:06.531Z",
-      "videoId": "tyN2FcSVbgI",
-      "baslik": "🔵 Shakhtar Donetsk 0-1 Fenerbahçe | UEFA Şampiyonlar Ligi 5. Hafta",
-      "kanal": "Fenerbahçe SK",
-      "kanalId": "UCgqlho3-8a6FmDqQm7Q6gJw",
-      "resim": "https://i.ytimg.com/vi/tyN2FcSVbgI/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-kPZLpcASImE",
-      "tur": "esik",
-      "metin": "DW Türkçe kanalının “İran'da başörtüsüz konser vermenin bedelini ağır ödedi” videosu 11 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-25T23:40:06.531Z",
-      "videoId": "kPZLpcASImE",
-      "baslik": "İran'da başörtüsüz konser vermenin bedelini ağır ödedi",
-      "kanal": "DW Türkçe",
-      "kanalId": "UCpi_jv70749NkAmkdugyiPQ",
-      "resim": "https://i.ytimg.com/vi/kPZLpcASImE/mqdefault.jpg"
     }
   ]
 }
