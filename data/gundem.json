@@ -1,6 +1,28 @@
 {
-  "guncelleme": "2026-11-28T03:44:28.448Z",
+  "guncelleme": "2026-11-28T04:49:34.267Z",
   "olaylar": [
+    {
+      "id": "esik-100000-rrNadKyT24I",
+      "tur": "esik",
+      "metin": "KAFA TV kanalının “Kuğulu Park’tan İyi Haber Geldi😂 | Can Yılmaz İle Geri Vites” videosu 12 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-28T04:49:34.267Z",
+      "videoId": "rrNadKyT24I",
+      "baslik": "Kuğulu Park’tan İyi Haber Geldi😂 | Can Yılmaz İle Geri Vites",
+      "kanal": "KAFA TV",
+      "kanalId": "UC3UYYweSGUJgk_TlUzpEaBw",
+      "resim": "https://i.ytimg.com/vi/rrNadKyT24I/mqdefault.jpg"
+    },
+    {
+      "id": "esik-100000-ZyNNHtjWnQQ",
+      "tur": "esik",
+      "metin": "Turancan kanalının “GTA 6 - JET SKİ KÖPEK, MALİBUYA DÖNÜŞ” videosu 4 saatte 100 bin izlenmeyi geçti.",
+      "tarih": "2026-11-28T04:49:34.267Z",
+      "videoId": "ZyNNHtjWnQQ",
+      "baslik": "GTA 6 - JET SKİ KÖPEK, MALİBUYA DÖNÜŞ",
+      "kanal": "Turancan",
+      "kanalId": "UCQ9qcvNuitjpJEwNKeRE3Ig",
+      "resim": "https://i.ytimg.com/vi/ZyNNHtjWnQQ/mqdefault.jpg"
+    },
     {
       "id": "esik-100000-_K3ZGZsWiMM",
       "tur": "esik",
@@ -2332,17 +2354,6 @@
       "kanal": "netd müzik",
       "kanalId": "UCR5wZcXtOUka8jTA57flzMg",
       "resim": "https://i.ytimg.com/vi/k_FGhRf24lA/mqdefault.jpg"
-    },
-    {
-      "id": "esik-100000-dAOcAdWIKYI",
-      "tur": "esik",
-      "metin": "TRT SPOR kanalının “Şampiyonlar Ligi 5. Hafta | Sporting - Manchester United (Özet)” videosu 6 saatte 100 bin izlenmeyi geçti.",
-      "tarih": "2026-11-26T04:34:14.585Z",
-      "videoId": "dAOcAdWIKYI",
-      "baslik": "Şampiyonlar Ligi 5. Hafta | Sporting - Manchester United (Özet)",
-      "kanal": "TRT SPOR",
-      "kanalId": "UCfYNqluOf8EbQkL44otydMw",
-      "resim": "https://i.ytimg.com/vi/dAOcAdWIKYI/mqdefault.jpg"
     }
   ]
 }
